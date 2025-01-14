@@ -50,9 +50,24 @@
   color: #666;
 }
 
-/* Hero section */
-.hero {
-  height: 100vh;
+/* Main content */
+.main {
+  padding-top: 80px;
+  /* Header height + padding */
+}
+
+.page {
+  min-height: calc(100vh - 80px - 200px);
+  /* Viewport height - header - footer */
+}
+
+/* Hero sections */
+.hero,
+.about-hero,
+.products-hero,
+.news-hero,
+.contact-hero {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,16 +77,139 @@
   padding: 2rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
+/* Product styles */
+.product-grid,
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card.large {
+  padding: 2rem;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
   margin-bottom: 1rem;
+  border-radius: 4px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.product-features {
+  list-style: none;
+  margin: 1rem 0;
 }
 
+.product-features li {
+  margin: 0.5rem 0;
+}
+
+/* News styles */
+.news-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Contact styles */
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* About page styles */
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-list li {
+  margin: 0.8rem 0;
+}
+
+/* Common components */
 .cta-button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -87,57 +225,21 @@
   background-color: #444;
 }
 
-/* Featured products section */
-.featured-products {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.featured-products h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.product-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  width: 100%;
-  height: 200px;
-  background-color: #f0f0f0;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-
-.product-card h3 {
-  margin-bottom: 0.5rem;
-}
-
-.product-card button {
-  width: 100%;
-  padding: 0.8rem;
+.read-more {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
   margin-top: 1rem;
-  background-color: #333;
-  color: white;
-  border: none;
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.product-card button:hover {
-  background-color: #444;
+.read-more:hover {
+  background-color: #333;
+  color: white;
 }
 
 /* Footer styles */
@@ -184,6 +286,10 @@
   .nav-links {
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {

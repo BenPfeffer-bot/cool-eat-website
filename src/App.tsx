@@ -1,60 +1,59 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+
+// Import pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Products from './pages/Products';
+import News from './pages/News';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="app">
-      <header className="header">
-        <nav className="nav">
-          <div className="logo">Your Logo</div>
-          <div className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
-      </header>
-
-      <main className="main">
-        <section className="hero">
-          <h1>Welcome to Our Store</h1>
-          <p>Discover our unique collection</p>
-          <button className="cta-button">Shop Now</button>
-        </section>
-
-        <section className="featured-products">
-          <h2>Featured Products</h2>
-          <div className="product-grid">
-            {/* Product cards will go here */}
-            <div className="product-card">
-              <div className="product-image"></div>
-              <h3>Product 1</h3>
-              <p>Description of the product</p>
-              <button>Add to Cart</button>
+    <Router>
+      <div className="app">
+        <header className="header">
+          <nav className="nav">
+            <div className="logo">Le Casier Français</div>
+            <div className="nav-links">
+              <Link to="/">Accueil</Link>
+              <Link to="/about">Qui sommes-nous</Link>
+              <Link to="/products">Produits</Link>
+              <Link to="/news">Actualités</Link>
+              <Link to="/contact">Contact</Link>
             </div>
-            {/* Repeat for more products */}
-          </div>
-        </section>
-      </main>
+          </nav>
+        </header>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <p>Email: contact@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-          </div>
-          <div className="footer-section">
-            <h4>Follow Us</h4>
-            <div className="social-links">
-              <a href="#instagram">Instagram</a>
-              <a href="#facebook">Facebook</a>
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+
+        <footer className="footer">
+          <div className="footer-content">
+            <div className="footer-section">
+              <h4>Contact</h4>
+              <p>📞 03 20 96 76 02</p>
+              <p>✉️ contact@lecasierfrancais.fr</p>
+            </div>
+            <div className="footer-section">
+              <h4>Suivez-nous</h4>
+              <div className="social-links">
+                <a href="#instagram">Instagram</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#linkedin">LinkedIn</a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
