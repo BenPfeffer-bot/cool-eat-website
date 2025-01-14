@@ -14,6 +14,9 @@ interface Problem {
 interface Solution {
     icon: JSX.Element;
     title: string;
+    description: string;
+    stats: string;
+    statsLabel: string;
 }
 
 interface ProductFeature {
@@ -49,19 +52,31 @@ const problems: Problem[] = [
 const solutions: Solution[] = [
     {
         icon: <SafeHygenicIcon />,
-        title: 'Safe and hygenic'
+        title: 'Safe and Hygienic',
+        description: 'Temperature-controlled environment keeps food fresh and safe for consumption.',
+        stats: '99.9%',
+        statsLabel: 'Food Safety Rate'
     },
     {
         icon: <NoExtraBagsIcon />,
-        title: 'Forget about extra bags'
+        title: 'Convenient Access',
+        description: 'No need for extra bags or containers. Access your food whenever you need it.',
+        stats: '24/7',
+        statsLabel: 'Accessibility'
     },
     {
         icon: <SecureStorageIcon />,
-        title: 'Secure storage'
+        title: 'Secure Storage',
+        description: 'Advanced security features ensure your food is safe and accessible only to you.',
+        stats: '100%',
+        statsLabel: 'Security Rate'
     },
     {
         icon: <MinimizeWasteIcon />,
-        title: 'Minimize waste'
+        title: 'Minimize Waste',
+        description: 'Smart management system helps reduce food waste significantly.',
+        stats: '-40%',
+        statsLabel: 'Waste Reduction'
     }
 ];
 
@@ -191,38 +206,94 @@ const Products = () => {
             </section>
 
             {/* Solutions Section */}
-            <section className="py-24 bg-gray-50" aria-labelledby="solutions-title">
+            <section className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50" aria-labelledby="solutions-title">
                 <Container>
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-5xl mx-auto">
                         <ScrollReveal>
-                            <h2
-                                id="solutions-title"
-                                className="text-7xl font-bold mb-20 text-gray-900 text-center"
-                            >
-                                Solution
-                            </h2>
+                            <div className="text-center mb-16">
+                                <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                                    Our Solution
+                                </span>
+                                <h2
+                                    id="solutions-title"
+                                    className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-gray-900"
+                                >
+                                    Smart Storage for Modern Needs
+                                </h2>
+                                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                                    Our innovative smart locker system combines cutting-edge technology with practical solutions
+                                    to address your food storage challenges.
+                                </p>
+                            </div>
                         </ScrollReveal>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {solutions.map((solution, index) => (
                                 <ScrollReveal
                                     key={solution.title}
-                                    delay={index * 100}
+                                    delay={index * 150}
                                 >
-                                    <div className="flex flex-col items-center text-center group">
-                                        <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                                            {solution.icon}
-                                        </div>
-                                        <div className="relative">
-                                            <h3 className="text-xl font-medium text-gray-900">
-                                                {solution.title}
-                                            </h3>
-                                            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <div className="relative group">
+                                        {/* Card Background with hover effect */}
+                                        <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl transform group-hover:scale-105 transition-transform duration-300 -z-10" />
+
+                                        {/* Card Content */}
+                                        <div className="relative p-6 flex flex-col items-center text-center space-y-4">
+                                            {/* Icon with animated background */}
+                                            <div className="relative">
+                                                <div className="absolute inset-0 bg-green-200 rounded-full opacity-0 group-hover:opacity-20 transform group-hover:scale-150 transition-all duration-700" />
+                                                <div className="relative w-16 h-16 flex items-center justify-center text-green-600 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                                    {solution.icon}
+                                                </div>
+                                            </div>
+
+                                            {/* Stats */}
+                                            <div className="mt-2">
+                                                <div className="text-3xl font-bold text-green-600 group-hover:scale-110 transition-transform duration-300">
+                                                    {solution.stats}
+                                                </div>
+                                                <div className="text-sm text-gray-600 mt-1">
+                                                    {solution.statsLabel}
+                                                </div>
+                                            </div>
+
+                                            {/* Title and Description */}
+                                            <div className="space-y-2">
+                                                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
+                                                    {solution.title}
+                                                </h3>
+                                                <p className="text-gray-600 text-sm leading-relaxed">
+                                                    {solution.description}
+                                                </p>
+                                            </div>
+
+                                            {/* Decorative elements */}
+                                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300" />
                                         </div>
                                     </div>
                                 </ScrollReveal>
                             ))}
                         </div>
+
+                        {/* Call to Action */}
+                        <ScrollReveal delay={600}>
+                            <div className="mt-16 text-center">
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 group"
+                                >
+                                    <span>Start Your Free Trial</span>
+                                    <svg
+                                        className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </Container>
             </section>

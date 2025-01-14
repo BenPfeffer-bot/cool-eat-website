@@ -42,6 +42,7 @@ export default {
         'fade-in': 'fade-in 0.8s ease-out',
         'fade-in-up': 'fade-in-up 0.8s ease-out',
         'slide-in': 'slide-in 1s ease-out',
+        'scroll': 'scroll 30s linear infinite'
       },
       keyframes: {
         'fade-in': {
@@ -56,6 +57,10 @@ export default {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' },
         },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
+        }
       },
       spacing: {
         '128': '32rem',

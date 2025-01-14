@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
 import AnimatedText from '../components/ui/AnimatedText';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import PartnerBanner from '../components/sections/PartnerBanner';
 import { SafeHygenicIcon, NoExtraBagsIcon, SecureStorageIcon, MinimizeWasteIcon } from '../components/icons/SolutionIcons';
 import ResponsiveImage from '../components/ui/ResponsiveImage';
+import HomeArticles from '../components/home/HomeArticles';
 
 interface Feature {
     icon: JSX.Element;
@@ -72,7 +74,7 @@ const Home: React.FC<HomeProps> = () => {
                 <ResponsiveImage
                     mobileSrc="/home-mobile.webp"
                     tabletSrc="/home-tablet.webp"
-                    desktopSrc="/home.webp"
+                    desktopSrc="/fridge.png"
                     alt="CoolEat Hero"
                     className="absolute inset-0 z-0"
                 />
@@ -95,43 +97,8 @@ const Home: React.FC<HomeProps> = () => {
                 </Container>
             </section>
 
-            {/* Features Section */}
-            <section className="py-16 sm:py-20 md:py-24 bg-white">
-                <Container>
-                    <ScrollReveal>
-                        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
-                                Our Features
-                            </span>
-                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
-                                Smart Solutions for Every Need
-                            </h2>
-                            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                                Discover how our innovative storage solutions can transform your space
-                                and reduce food waste.
-                            </p>
-                        </div>
-                    </ScrollReveal>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
-                        {features.map((feature, index) => (
-                            <ScrollReveal key={feature.title} delay={index * 100}>
-                                <div className="touch-feedback text-center space-y-4 p-4 sm:p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-100 group">
-                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-50 flex items-center justify-center text-green-600 mx-auto mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                                        {feature.icon}
-                                    </div>
-                                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
-                                        {feature.title}
-                                    </h3>
-                                    <p className="text-sm sm:text-base text-gray-600">
-                                        {feature.description}
-                                    </p>
-                                </div>
-                            </ScrollReveal>
-                        ))}
-                    </div>
-                </Container>
-            </section>
+            {/* Partner Banner */}
+            <PartnerBanner />
 
             {/* Impact Section */}
             <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
@@ -180,8 +147,46 @@ const Home: React.FC<HomeProps> = () => {
                 </Container>
             </section>
 
-            {/* Latest News */}
+
+            {/* Features Section */}
             <section className="py-16 sm:py-20 md:py-24 bg-white">
+                <Container>
+                    <ScrollReveal>
+                        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                                Our Features
+                            </span>
+                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
+                                Smart Solutions for Every Need
+                            </h2>
+                            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                                Discover how our innovative storage solutions can transform your space
+                                and reduce food waste.
+                            </p>
+                        </div>
+                    </ScrollReveal>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+                        {features.map((feature, index) => (
+                            <ScrollReveal key={feature.title} delay={index * 100}>
+                                <div className="touch-feedback text-center space-y-4 p-4 sm:p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-100 group">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-50 flex items-center justify-center text-green-600 mx-auto mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                                        {feature.icon}
+                                    </div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-sm sm:text-base text-gray-600">
+                                        {feature.description}
+                                    </p>
+                                </div>
+                            </ScrollReveal>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+            {/* Latest News */}
+            {/* <section className="py-16 sm:py-20 md:py-24 bg-white">
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
@@ -239,8 +244,10 @@ const Home: React.FC<HomeProps> = () => {
                         ))}
                     </div>
                 </Container>
-            </section>
+            </section> */}
 
+            {/* Featured Articles */}
+            <HomeArticles />
             {/* CTA Section */}
             <section className="py-16 sm:py-20 md:py-24 bg-green-600 text-white">
                 <Container>

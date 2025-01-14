@@ -87,6 +87,15 @@ Copy `.env.example` to `.env` and configure the following variables:
 - Follow the project structure
 - Test thoroughly before deployment
 
+## Partner Logos
+
+The website requires the following partner logos to be placed in the `/public/partners/` directory:
+
+- `barclays.png` - Barclays logo (recommended size: 128px height, transparent background)
+- `escp.png` - ESCP Business School logo (recommended size: 128px height, transparent background)
+
+Please ensure these logos are in PNG format with transparent backgrounds for the best visual appearance.
+
 ## License
 
 [Your License] - See LICENSE file for details

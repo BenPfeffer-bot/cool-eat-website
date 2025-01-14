@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
 import AnimatedText from '../components/ui/AnimatedText';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import Timeline from '../components/sections/Timeline';
 
 interface TeamMember {
     name: string;
@@ -202,6 +203,9 @@ const About = () => {
                 </Container>
             </section>
 
+            {/* Timeline Section */}
+            <Timeline />
+
             {/* Contact Section */}
             <section className="py-24 bg-green-600 text-white">
                 <Container>
@@ -212,7 +216,7 @@ const About = () => {
                                 Ready to transform food storage and reduce waste? Contact us to learn more about
                                 our solutions.
                             </p>
-                            <div className="space-y-4">
+                            {/* <div className="space-y-4">
                                 <p className="text-lg">
                                     Email: <a href="mailto:a.s@Cooleat.eu" className="underline hover:text-green-400 transition-colors">
                                         a.s@Cooleat.eu
@@ -228,7 +232,7 @@ const About = () => {
                                         +44 7467 819 042
                                     </a>
                                 </p>
-                            </div>
+                            </div> */}
                             <div className="mt-12">
                                 <Link
                                     to="/contact"

@@ -1,57 +1,7 @@
 import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
-import AnimatedText from '../components/ui/AnimatedText';
 import ScrollReveal from '../components/ui/ScrollReveal';
-
-interface NewsArticle {
-    date: string;
-    title: string;
-    excerpt: string;
-    category: string;
-    readTime: string;
-    image: string;
-    slug: string;
-}
-
-const newsArticles: NewsArticle[] = [
-    {
-        date: 'March 15, 2024',
-        title: 'CoolEat Launches Smart Locker Solution for Universities',
-        excerpt: 'Introducing our innovative food storage solution designed specifically for university campuses, helping students maintain food freshness and reduce waste.',
-        category: 'Product Launch',
-        readTime: '3 min read',
-        image: '/launch.jpg',
-        slug: 'cooleat-launches-university-solution'
-    },
-    {
-        date: 'March 10, 2024',
-        title: 'Reducing Food Waste in Local Restaurants',
-        excerpt: 'How our smart locker system is helping local restaurants minimize food waste while maintaining full price margins on their deliveries.',
-        category: 'Case Study',
-        readTime: '5 min read',
-        image: '/fruits.jpg',
-        slug: 'reducing-restaurant-food-waste'
-    },
-    {
-        date: 'March 5, 2024',
-        title: 'Partnership with Leading Supermarket Chain',
-        excerpt: 'CoolEat partners with a major supermarket chain to implement smart storage solutions for surplus food management.',
-        category: 'Partnership',
-        readTime: '4 min read',
-        image: '/Gray Basket Photo.jpg',
-        slug: 'supermarket-chain-partnership'
-    }
-];
-
-const featuredArticle: NewsArticle = {
-    date: 'March 20, 2024',
-    title: 'The Future of Sustainable Food Storage',
-    excerpt: 'Exploring how smart locker technology is revolutionizing food storage and contributing to a more sustainable future. Learn about the latest innovations in temperature-controlled storage solutions.',
-    category: 'Innovation',
-    readTime: '6 min read',
-    image: 'public/zero waste.png',
-    slug: 'future-of-sustainable-storage'
-};
+import { newsArticles, featuredArticle } from '../data/news/articles';
 
 const News = () => {
     return (
@@ -62,7 +12,7 @@ const News = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("public/wind_background.jpg")',
+                        backgroundImage: 'url("/wind_background.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
@@ -164,7 +114,7 @@ const News = () => {
                     {/* Recent Articles Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
                         {newsArticles.map((article, index) => (
-                            <ScrollReveal key={article.slug} delay={index * 100}>
+                            <ScrollReveal key={article.id} delay={index * 100}>
                                 <Link to={`/news/${article.slug}`} className="block group h-full">
                                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
                                         <div className="aspect-video overflow-hidden">
