@@ -33,7 +33,7 @@ const teamMembers: TeamMember[] = [
 
 const sustainabilityGoals: SustainabilityGoal[] = [
     {
-        icon: '/sdg12.png',
+        icon: '/logo_resp.webp',
         title: 'Responsible Consumption',
         description: 'Promoting sustainable practices by reducing food waste and encouraging responsible consumption patterns.'
     },
@@ -53,7 +53,7 @@ const About = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("/about-hero.jpg")',
+                        backgroundImage: 'url("/responsable_consump.webp")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
@@ -86,7 +86,7 @@ const About = () => {
                         <ScrollReveal direction="left">
                             <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="/mission.jpg"
+                                    src="/mission.webp"
                                     alt="Our Mission"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                                 />
@@ -203,11 +203,11 @@ const About = () => {
             </section>
 
             {/* Contact Section */}
-            <section className="py-24 bg-[#00BFFF] text-white">
+            <section className="py-24 bg-green-600 text-white">
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-bold mb-6">Join Our Mission</h2>
+                            <h2 className="text-4xl font-bold mb-6 text-white">Join Our Mission</h2>
                             <p className="text-xl text-white/80 leading-relaxed mb-8">
                                 Ready to transform food storage and reduce waste? Contact us to learn more about
                                 our solutions.

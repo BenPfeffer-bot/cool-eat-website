@@ -75,7 +75,7 @@ const productFeatures: ProductFeature[] = [
             'No additional staff required',
             'Temperature-controlled storage'
         ],
-        image: '/supermarket-solution.jpg'
+        image: '/supermarket.webp'
     },
     {
         title: 'For Universities & Open Spaces',
@@ -86,7 +86,7 @@ const productFeatures: ProductFeature[] = [
             'Convenient app-based access',
             'Energy-efficient operation'
         ],
-        image: '/university-solution.jpg'
+        image: '/uni.webp'
     },
     {
         title: 'For Local Restaurants',
@@ -97,7 +97,7 @@ const productFeatures: ProductFeature[] = [
             'Flexible pickup options',
             'Real-time temperature monitoring'
         ],
-        image: '/restaurant-solution.jpg'
+        image: '/restaurant.webp'
     }
 ];
 

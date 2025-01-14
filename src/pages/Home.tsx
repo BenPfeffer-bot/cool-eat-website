@@ -48,7 +48,7 @@ const latestNews: NewsArticle[] = [
         excerpt: "How our smart lockers are transforming campus dining and reducing food waste.",
         date: "March 15, 2024",
         category: "Case Study",
-        image: "/news/university-case.jpg",
+        image: "public/fridge.png",
         slug: "university-food-storage"
     },
     {
@@ -56,7 +56,7 @@ const latestNews: NewsArticle[] = [
         excerpt: "CoolEat expands its reach with a new partnership to tackle food waste.",
         date: "March 10, 2024",
         category: "Partnership",
-        image: "/news/supermarket-partnership.jpg",
+        image: "public/Gray Basket Photo.jpg",
         slug: "supermarket-partnership"
     }
 ];
@@ -81,7 +81,7 @@ const Home = () => {
                 <Container className="relative z-10">
                     <div className="max-w-3xl">
                         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                            Smart Food Storage Solutions
+                            Cool Eat
                         </h1>
                         <p className="text-xl text-white/90 mb-8">
                             Transform your workplace with innovative, sustainable food storage solutions
@@ -171,7 +171,7 @@ const Home = () => {
                         <ScrollReveal delay={200}>
                             <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="/impact-image.jpg"
+                                    src="/impact.jpg"
                                     alt="Our Impact"
                                     className="w-full h-full object-cover"
                                 />
@@ -245,7 +245,7 @@ const Home = () => {
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+                            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Get Started?</h2>
                             <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Transform your space with our smart storage solutions. Start your 1-month trial today.
                             </p>

@@ -20,7 +20,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'Introducing our innovative food storage solution designed specifically for university campuses, helping students maintain food freshness and reduce waste.',
         category: 'Product Launch',
         readTime: '3 min read',
-        image: '/news/university-launch.jpg',
+        image: 'public/launch.jpg',
         slug: 'cooleat-launches-university-solution'
     },
     {
@@ -29,7 +29,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'How our smart locker system is helping local restaurants minimize food waste while maintaining full price margins on their deliveries.',
         category: 'Case Study',
         readTime: '5 min read',
-        image: '/news/restaurant-case-study.jpg',
+        image: 'public/fruits.jpg',
         slug: 'reducing-restaurant-food-waste'
     },
     {
@@ -38,7 +38,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'CoolEat partners with a major supermarket chain to implement smart storage solutions for surplus food management.',
         category: 'Partnership',
         readTime: '4 min read',
-        image: '/news/supermarket-partnership.jpg',
+        image: 'public/Gray Basket Photo.jpg',
         slug: 'supermarket-chain-partnership'
     }
 ];
@@ -49,7 +49,7 @@ const featuredArticle: NewsArticle = {
     excerpt: 'Exploring how smart locker technology is revolutionizing food storage and contributing to a more sustainable future. Learn about the latest innovations in temperature-controlled storage solutions.',
     category: 'Innovation',
     readTime: '6 min read',
-    image: '/news/future-storage.jpg',
+    image: 'public/zero waste.png',
     slug: 'future-of-sustainable-storage'
 };
 
@@ -62,7 +62,7 @@ const News = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("/news-hero.jpg")',
+                        backgroundImage: 'url("public/wind_background.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
@@ -212,7 +212,7 @@ const News = () => {
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+                            <h2 className="text-4xl font-bold mb-6 text-white">Stay Updated</h2>
                             <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Subscribe to our newsletter to receive the latest updates and insights about sustainable food storage solutions.
                             </p>
