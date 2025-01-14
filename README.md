@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# Cool Eat Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website built with React, TypeScript, and Vite.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js 18.x or higher
+- npm 9.x or higher
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/yourusername/cool-eat-website.git
+cd cool-eat-website
+```
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+3. Copy the environment file and configure it:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cp .env.example .env
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run dev
+```
 
-### `npm run eject`
+## Building for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Create a production build:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Preview the production build locally:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm run preview
+```
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Static Hosting (Recommended)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project is configured for static hosting on platforms like:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+
+### Manual Deployment
+
+1. Build the project:
+
+```bash
+npm run build
+```
+
+2. The `dist` folder will contain the production-ready files
+3. Deploy these files to your hosting provider
+
+## Environment Variables
+
+Copy `.env.example` to `.env` and configure the following variables:
+
+- `VITE_APP_NAME`: Application name
+- `VITE_APP_ENV`: Environment (development/production)
+- `VITE_APP_URL`: Application URL
+- See `.env.example` for more options
+
+## Best Practices
+
+- Always run `npm run lint` before committing
+- Keep dependencies updated
+- Use TypeScript strictly
+- Follow the project structure
+- Test thoroughly before deployment
+
+## License
+
+[Your License] - See LICENSE file for details

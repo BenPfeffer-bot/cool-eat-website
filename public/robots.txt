@@ -1,6 +1,11 @@
-# Allow all web crawlers
+# Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://cooleat.eu/sitemap.xml
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Disallow certain paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
