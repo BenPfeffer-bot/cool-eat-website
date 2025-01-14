@@ -18,20 +18,20 @@ const Products = () => {
                             delay={200}
                             className="text-primary-600"
                         >
-                            Innovative food distribution systems designed for efficiency and sustainability
+                            Smart food storage systems for modern institutions
                         </AnimatedText>
                     </div>
                 </Container>
             </section>
 
-            {/* Featured Product */}
+            {/* Product Overview */}
             <section className="py-24 bg-white">
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
                         <ScrollReveal direction="left">
                             <Image
-                                src="/product-main.jpg"
-                                alt="Smart Distribution System"
+                                src="/product overview.png"
+                                alt="Product Overview"
                                 aspectRatio="4:3"
                                 hover="zoom"
                                 className="rounded-lg shadow-lg"
@@ -39,11 +39,11 @@ const Products = () => {
                         </ScrollReveal>
                         <ScrollReveal direction="right" delay={200}>
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-serif">Smart Distribution System</h2>
+                                <h2 className="text-4xl font-serif">Smart Storage System</h2>
                                 <p className="text-xl text-primary-600 leading-relaxed">
-                                    Our flagship solution combines advanced technology with sustainable practices
-                                    to revolutionize food distribution. Features include temperature control,
-                                    real-time monitoring, and automated inventory management.
+                                    Our innovative food storage solution combines advanced technology
+                                    with sustainable practices. Features include temperature control,
+                                    real-time monitoring, and secure access management.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -51,34 +51,86 @@ const Products = () => {
                 </Container>
             </section>
 
-            {/* Product Features */}
+            {/* Smart Fridge Showcase */}
             <section className="py-24 bg-primary-50">
+                <Container>
+                    <ScrollReveal>
+                        <h2 className="text-4xl font-serif text-center mb-16">Smart Fridge Solutions</h2>
+                    </ScrollReveal>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <ScrollReveal delay={200}>
+                            <Image
+                                src="/fridge.png"
+                                alt="Smart Fridge"
+                                aspectRatio="4:3"
+                                hover="fade"
+                                className="rounded-lg shadow-lg"
+                            />
+                        </ScrollReveal>
+                        <ScrollReveal delay={400}>
+                            <Image
+                                src="/fridge 2.png"
+                                alt="Smart Fridge Installation"
+                                aspectRatio="4:3"
+                                hover="fade"
+                                className="rounded-lg shadow-lg"
+                            />
+                        </ScrollReveal>
+                    </div>
+                </Container>
+            </section>
+
+            {/* Key Features */}
+            <section className="py-24 bg-white">
                 <Container>
                     <ScrollReveal>
                         <h2 className="text-4xl font-serif text-center mb-16">Key Features</h2>
                     </ScrollReveal>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        {features.map((feature, index) => (
-                            <ScrollReveal key={feature.title} delay={200 * index}>
-                                <div className="space-y-4">
-                                    <Image
-                                        src={feature.image}
-                                        alt={feature.title}
-                                        aspectRatio="1:1"
-                                        hover="fade"
-                                        className="mb-6 rounded-lg"
-                                    />
-                                    <h3 className="text-xl uppercase tracking-widest">{feature.title}</h3>
-                                    <p className="text-primary-600">{feature.description}</p>
-                                </div>
-                            </ScrollReveal>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        <ScrollReveal delay={200}>
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-serif">Smart Technology</h3>
+                                <ul className="space-y-4 text-primary-600">
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>App-based control system</span>
+                                    </li>
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>Real-time temperature monitoring</span>
+                                    </li>
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>Secure access management</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal delay={400}>
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-serif">Sustainability</h3>
+                                <ul className="space-y-4 text-primary-600">
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>Energy-efficient operation</span>
+                                    </li>
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>Reduced food waste</span>
+                                    </li>
+                                    <li className="flex items-center space-x-3">
+                                        <span className="text-green-500">✓</span>
+                                        <span>Eco-friendly materials</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </Container>
             </section>
 
             {/* Technical Specifications */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-primary-50">
                 <Container>
                     <ScrollReveal>
                         <h2 className="text-4xl font-serif text-center mb-16">Technical Specifications</h2>
@@ -101,9 +153,9 @@ const Products = () => {
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-serif mb-6">Ready to Transform Your Distribution?</h2>
+                            <h2 className="text-4xl font-serif mb-6">Ready to Transform Your Food Storage?</h2>
                             <p className="text-xl text-white/80 leading-relaxed mb-8">
-                                Contact us to learn more about our solutions and how they can benefit your business.
+                                Contact us to learn more about our solutions and how they can benefit your institution.
                             </p>
                             <button className="bg-white text-primary px-8 py-3 rounded-lg text-lg font-medium hover:bg-primary-50 transition-colors">
                                 Get Started
@@ -115,24 +167,6 @@ const Products = () => {
         </div>
     );
 };
-
-const features = [
-    {
-        title: "Temperature Control",
-        description: "Precise temperature management for optimal food preservation",
-        image: "/feature-temp.jpg"
-    },
-    {
-        title: "Smart Monitoring",
-        description: "Real-time tracking and analytics for inventory management",
-        image: "/feature-monitor.jpg"
-    },
-    {
-        title: "Eco-Friendly",
-        description: "Sustainable design with energy-efficient operation",
-        image: "/feature-eco.jpg"
-    }
-];
 
 const specifications = [
     {

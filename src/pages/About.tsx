@@ -24,25 +24,26 @@ const About = () => {
                 </Container>
             </section>
 
-            {/* Mission Section */}
+            {/* Benefits Section */}
             <section className="py-24 bg-white">
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
                         <ScrollReveal direction="left">
                             <Image
-                                src="/mission.jpg"
-                                alt="Our Mission"
+                                src="/benefits.png"
+                                alt="Cool Eat Benefits"
                                 aspectRatio="4:3"
                                 hover="fade"
+                                className="rounded-lg"
                             />
                         </ScrollReveal>
                         <ScrollReveal direction="right" delay={200}>
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-serif">Our Mission</h2>
+                                <h2 className="text-4xl font-serif">Our Impact</h2>
                                 <p className="text-xl text-primary-600 leading-relaxed">
-                                    We're on a mission to revolutionize food distribution by creating
-                                    sustainable, efficient solutions that benefit both producers and
-                                    consumers while minimizing environmental impact.
+                                    We create value for both students and universities through our innovative
+                                    food storage solutions. Our system promotes fresher meals, safety,
+                                    convenience, and cost savings while reducing food waste.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -50,38 +51,74 @@ const About = () => {
                 </Container>
             </section>
 
-            {/* Values Section */}
+            {/* Problems We Solve */}
             <section className="py-24 bg-primary-50">
                 <Container>
                     <ScrollReveal>
-                        <h2 className="text-4xl font-serif text-center mb-16">Our Values</h2>
+                        <h2 className="text-4xl font-serif text-center mb-16">Problems We Solve</h2>
                     </ScrollReveal>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        <ScrollReveal delay={200}>
-                            <div className="space-y-4">
-                                <h3 className="text-xl uppercase tracking-widest mb-4">Innovation</h3>
-                                <p className="text-primary-600">
-                                    Constantly pushing boundaries to create smarter, more efficient
-                                    distribution solutions.
-                                </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <ScrollReveal direction="left">
+                            <Image
+                                src="/problems.png"
+                                alt="Food Distribution Problems"
+                                aspectRatio="16:9"
+                                hover="fade"
+                                className="rounded-lg mb-8"
+                            />
+                        </ScrollReveal>
+                        <ScrollReveal direction="right" delay={200}>
+                            <div className="space-y-6">
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Food Spoilage</h3>
+                                    <p className="text-primary-600">Preventing food from being left at room temperature</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Food Waste</h3>
+                                    <p className="text-primary-600">Reducing waste in cafeterias and workplaces</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Storage Solutions</h3>
+                                    <p className="text-primary-600">Providing convenient and secure food storage</p>
+                                </div>
                             </div>
                         </ScrollReveal>
-                        <ScrollReveal delay={400}>
-                            <div className="space-y-4">
-                                <h3 className="text-xl uppercase tracking-widest mb-4">Sustainability</h3>
-                                <p className="text-primary-600">
-                                    Committed to reducing environmental impact through eco-conscious
-                                    practices and technologies.
-                                </p>
+                    </div>
+                </Container>
+            </section>
+
+            {/* Our Solutions */}
+            <section className="py-24 bg-white">
+                <Container>
+                    <ScrollReveal>
+                        <h2 className="text-4xl font-serif text-center mb-16">Our Solutions</h2>
+                    </ScrollReveal>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <ScrollReveal direction="left">
+                            <div className="space-y-6">
+                                <Image
+                                    src="/solutions.png"
+                                    alt="Cool Eat Solutions"
+                                    aspectRatio="1:1"
+                                    hover="fade"
+                                    className="rounded-lg mb-8"
+                                />
                             </div>
                         </ScrollReveal>
-                        <ScrollReveal delay={600}>
-                            <div className="space-y-4">
-                                <h3 className="text-xl uppercase tracking-widest mb-4">Community</h3>
-                                <p className="text-primary-600">
-                                    Building strong relationships between producers, distributors,
-                                    and consumers.
-                                </p>
+                        <ScrollReveal direction="right" delay={200}>
+                            <div className="space-y-8">
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Safe and Hygienic</h3>
+                                    <p className="text-primary-600">Temperature-controlled storage for food safety</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Smart Technology</h3>
+                                    <p className="text-primary-600">App-based control and monitoring system</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl uppercase tracking-widest">Sustainability</h3>
+                                    <p className="text-primary-600">Focus on reducing food waste and environmental impact</p>
+                                </div>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -89,42 +126,87 @@ const About = () => {
             </section>
 
             {/* Team Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-primary-50">
                 <Container>
                     <ScrollReveal>
                         <h2 className="text-4xl font-serif text-center mb-16">Our Team</h2>
                     </ScrollReveal>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        {[1, 2, 3].map((member, index) => (
-                            <ScrollReveal key={member} delay={200 * index}>
-                                <div className="space-y-4">
-                                    <Image
-                                        src={`/team-${member}.jpg`}
-                                        alt={`Team Member ${member}`}
-                                        aspectRatio="1:1"
-                                        hover="zoom"
-                                        className="mb-6"
-                                    />
-                                    <h3 className="text-xl font-medium">Team Member {member}</h3>
-                                    <p className="text-primary-600">Position</p>
-                                </div>
-                            </ScrollReveal>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        <ScrollReveal delay={200}>
+                            <div className="text-center space-y-4">
+                                <Image
+                                    src="/founder_Amandine.JPG"
+                                    alt="Founder"
+                                    aspectRatio="1:1"
+                                    hover="fade"
+                                    className="rounded-full w-48 h-48 mx-auto mb-6"
+                                />
+                                <h3 className="text-xl font-medium">Amandine</h3>
+                                <p className="text-primary-600">Founder</p>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal delay={400}>
+                            <div className="text-center space-y-4">
+                                <Image
+                                    src="/tech_lead_vishal.png"
+                                    alt="Tech Lead"
+                                    aspectRatio="1:1"
+                                    hover="fade"
+                                    className="rounded-full w-48 h-48 mx-auto mb-6"
+                                />
+                                <h3 className="text-xl font-medium">Vishal</h3>
+                                <p className="text-primary-600">Tech Lead</p>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </Container>
             </section>
 
-            {/* Vision Section */}
-            <section className="py-24 bg-primary text-white">
+            {/* Sustainability Goals */}
+            <section className="py-24 bg-white">
                 <Container>
-                    <div className="max-w-3xl mx-auto text-center">
+                    <ScrollReveal>
+                        <h2 className="text-4xl font-serif text-center mb-16">Sustainability Goals</h2>
+                    </ScrollReveal>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        <ScrollReveal delay={200}>
+                            <Image
+                                src="/sdg.png"
+                                alt="SDG 12 - Responsible Consumption"
+                                aspectRatio="1:1"
+                                hover="fade"
+                                className="rounded-lg"
+                            />
+                        </ScrollReveal>
+                        <ScrollReveal delay={400}>
+                            <Image
+                                src="/sdg2.png"
+                                alt="SDG 13 - Climate Action"
+                                aspectRatio="1:1"
+                                hover="fade"
+                                className="rounded-lg"
+                            />
+                        </ScrollReveal>
+                    </div>
+                </Container>
+            </section>
+
+            {/* Zero Waste Vision */}
+            <section className="py-24 bg-primary-50">
+                <Container>
+                    <div className="max-w-4xl mx-auto">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-serif mb-6">Our Vision</h2>
-                            <p className="text-xl text-white/80 leading-relaxed">
-                                We envision a future where food distribution is seamlessly
-                                connected, sustainable, and accessible to all. Through continuous
-                                innovation and collaboration, we're working to make this vision
-                                a reality.
+                            <h2 className="text-4xl font-serif text-center mb-16">Our Zero Waste Vision</h2>
+                            <Image
+                                src="/zero waste.png"
+                                alt="Zero Waste Vision"
+                                aspectRatio="16:9"
+                                hover="fade"
+                                className="rounded-lg mb-8"
+                            />
+                            <p className="text-xl text-primary-600 text-center leading-relaxed">
+                                We're committed to reducing food waste and promoting sustainable consumption
+                                through our innovative storage solutions.
                             </p>
                         </ScrollReveal>
                     </div>
