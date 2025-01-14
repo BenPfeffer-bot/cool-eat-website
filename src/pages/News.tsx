@@ -20,7 +20,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'Introducing our innovative food storage solution designed specifically for university campuses, helping students maintain food freshness and reduce waste.',
         category: 'Product Launch',
         readTime: '3 min read',
-        image: 'public/launch.jpg',
+        image: '/launch.jpg',
         slug: 'cooleat-launches-university-solution'
     },
     {
@@ -29,7 +29,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'How our smart locker system is helping local restaurants minimize food waste while maintaining full price margins on their deliveries.',
         category: 'Case Study',
         readTime: '5 min read',
-        image: 'public/fruits.jpg',
+        image: '/fruits.jpg',
         slug: 'reducing-restaurant-food-waste'
     },
     {
@@ -38,7 +38,7 @@ const newsArticles: NewsArticle[] = [
         excerpt: 'CoolEat partners with a major supermarket chain to implement smart storage solutions for surplus food management.',
         category: 'Partnership',
         readTime: '4 min read',
-        image: 'public/Gray Basket Photo.jpg',
+        image: '/Gray Basket Photo.jpg',
         slug: 'supermarket-chain-partnership'
     }
 ];
@@ -104,16 +104,17 @@ const News = () => {
 
                     <ScrollReveal>
                         <Link to={`/news/${featuredArticle.slug}`} className="block group">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                                 <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
                                     <img
                                         src={featuredArticle.image}
                                         alt={featuredArticle.title}
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                        loading="lazy"
                                     />
                                 </div>
-                                <div className="space-y-6">
-                                    <div className="flex items-center space-x-4">
+                                <div className="space-y-4 sm:space-y-6">
+                                    <div className="flex flex-wrap items-center gap-4">
                                         <span className="text-green-600 font-medium text-sm">
                                             {featuredArticle.category}
                                         </span>
@@ -124,10 +125,10 @@ const News = () => {
                                             {featuredArticle.readTime}
                                         </span>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
                                         {featuredArticle.title}
                                     </h3>
-                                    <p className="text-xl text-gray-600 leading-relaxed">
+                                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                                         {featuredArticle.excerpt}
                                     </p>
                                     <span className="inline-flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform">
@@ -160,20 +161,22 @@ const News = () => {
                         </div>
                     </ScrollReveal>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {/* Recent Articles Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
                         {newsArticles.map((article, index) => (
                             <ScrollReveal key={article.slug} delay={index * 100}>
-                                <Link to={`/news/${article.slug}`} className="block group">
-                                    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full">
+                                <Link to={`/news/${article.slug}`} className="block group h-full">
+                                    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
                                         <div className="aspect-video overflow-hidden">
                                             <img
                                                 src={article.image}
                                                 alt={article.title}
                                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                                loading="lazy"
                                             />
                                         </div>
-                                        <div className="p-8 space-y-4">
-                                            <div className="flex items-center space-x-4">
+                                        <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                                            <div className="flex flex-wrap items-center gap-4 mb-4">
                                                 <span className="text-green-600 font-medium text-sm">
                                                     {article.category}
                                                 </span>
@@ -181,13 +184,13 @@ const News = () => {
                                                     {article.readTime}
                                                 </span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors mb-4">
                                                 {article.title}
                                             </h3>
-                                            <p className="text-gray-600">
+                                            <p className="text-gray-600 mb-4 flex-grow">
                                                 {article.excerpt}
                                             </p>
-                                            <div className="pt-4 flex items-center justify-between">
+                                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                                                 <span className="text-gray-400 text-sm">
                                                     {article.date}
                                                 </span>

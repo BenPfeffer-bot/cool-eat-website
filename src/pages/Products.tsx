@@ -160,24 +160,22 @@ const Products = () => {
                     </div>
 
                     {/* Problems Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                         {problems.map((problem, index) => (
                             <ScrollReveal
                                 key={problem.title}
                                 delay={index * 100}
                             >
-                                <div
-                                    className="flex flex-col items-center text-center p-6 rounded-xl 
+                                <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl 
                                     bg-white shadow-sm hover:shadow-md transition-all duration-300
-                                    border border-gray-100 hover:border-green-100 group h-full"
-                                >
-                                    <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                                    border border-gray-100 hover:border-green-100 group h-full">
+                                    <div className="w-16 sm:w-20 lg:w-24 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
                                         {problem.icon}
                                     </div>
-                                    <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4 group-hover:text-green-600 transition-colors">
                                         {problem.title}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                                         {problem.description}
                                     </p>
                                 </div>
@@ -232,40 +230,45 @@ const Products = () => {
             {/* Product Features */}
             <section className="py-24 bg-white">
                 <Container>
-                    <div className="space-y-32">
+                    <div className="space-y-16 sm:space-y-24 lg:space-y-32">
                         {productFeatures.map((feature, index) => (
                             <ScrollReveal key={feature.title}>
-                                <div className={`grid grid-cols-1 md:grid-cols-2 gap-24 items-center ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
-                                    <div className={`space-y-8 ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                                        <h2 className="text-4xl font-bold text-gray-900">
+                                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+                                    <div className={`space-y-4 sm:space-y-6 lg:space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                                             {feature.title}
                                         </h2>
-                                        <p className="text-xl text-gray-600 leading-relaxed">
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
                                             {feature.description}
                                         </p>
-                                        <ul className="space-y-4">
+                                        <ul className="space-y-2 sm:space-y-4">
                                             {feature.benefits.map((benefit) => (
                                                 <li key={benefit} className="flex items-center space-x-3">
-                                                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                    <svg className="w-4 sm:w-5 h-4 sm:h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
-                                                    <span className="text-gray-600">{benefit}</span>
+                                                    <span className="text-sm sm:text-base text-gray-600">{benefit}</span>
                                                 </li>
                                             ))}
                                         </ul>
-                                        <Link
-                                            to="/contact"
-                                            className="inline-block px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                                        >
-                                            Learn More
-                                        </Link>
+                                        <div className="pt-4">
+                                            <Link
+                                                to="/contact"
+                                                className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-green-600 text-white text-sm sm:text-base rounded-lg hover:bg-green-700 transition-colors"
+                                            >
+                                                Learn More
+                                            </Link>
+                                        </div>
                                     </div>
-                                    <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
+                                    <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                                         <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
                                             <img
                                                 src={feature.image}
                                                 alt={feature.title}
                                                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                                                loading="lazy"
+                                                width="800"
+                                                height="600"
                                             />
                                         </div>
                                     </div>
