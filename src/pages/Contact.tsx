@@ -10,14 +10,14 @@ const Contact = () => {
                 <Container>
                     <div className="max-w-3xl">
                         <AnimatedText as="h1" variant="heading" className="mb-6">
-                            Get in Touch
+                            Start Your Trial Today
                         </AnimatedText>
                         <AnimatedText
                             variant="subheading"
                             delay={200}
                             className="text-primary-600"
                         >
-                            Let's discuss how we can transform your food distribution system
+                            Experience how CoolEat can transform your space with our 1-month trial
                         </AnimatedText>
                     </div>
                 </Container>
@@ -30,19 +30,24 @@ const Contact = () => {
                         <ScrollReveal direction="left">
                             <div className="space-y-12">
                                 <div>
-                                    <h2 className="text-4xl font-serif mb-6">Contact Us</h2>
+                                    <h2 className="text-4xl font-serif mb-6">Get Started</h2>
                                     <p className="text-xl text-primary-600 leading-relaxed">
-                                        We're here to help you find the perfect solution for your needs.
-                                        Fill out the form and we'll get back to you soon.
+                                        Ready to transform your workplace and reduce food waste? Schedule a 1-month
+                                        trial and see the difference CoolEat can make.
                                     </p>
                                 </div>
-                                <div className="space-y-4">
+                                <div className="space-y-8">
                                     {contactInfo.map((item, index) => (
                                         <div key={item.label} className="flex items-start space-x-4">
-                                            <div className="w-6 h-6 mt-1">{item.icon}</div>
+                                            <div className="w-6 h-6 mt-1 text-primary">{item.icon}</div>
                                             <div>
                                                 <h3 className="font-medium mb-1">{item.label}</h3>
-                                                <p className="text-primary-600">{item.value}</p>
+                                                <a
+                                                    href={item.link}
+                                                    className="text-primary-600 hover:text-primary transition-colors"
+                                                >
+                                                    {item.value}
+                                                </a>
                                             </div>
                                         </div>
                                     ))}
@@ -83,17 +88,27 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div>
+                                    <label className="block text-sm font-medium mb-2">Organization Type</label>
+                                    <select className="w-full px-4 py-3 rounded-lg border border-primary-200 focus:outline-none focus:border-primary">
+                                        <option value="">Select an option</option>
+                                        <option value="supermarket">Supermarket/Local Shop</option>
+                                        <option value="university">University/Open Space</option>
+                                        <option value="restaurant">Local Restaurant</option>
+                                    </select>
+                                </div>
+                                <div>
                                     <label className="block text-sm font-medium mb-2">Message</label>
                                     <textarea
                                         rows={4}
                                         className="w-full px-4 py-3 rounded-lg border border-primary-200 focus:outline-none focus:border-primary"
+                                        placeholder="Tell us about your needs and space requirements"
                                     ></textarea>
                                 </div>
                                 <button
                                     type="submit"
                                     className="w-full bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors"
                                 >
-                                    Send Message
+                                    Schedule Trial
                                 </button>
                             </form>
                         </ScrollReveal>
@@ -101,14 +116,28 @@ const Contact = () => {
                 </Container>
             </section>
 
-            {/* Map Section */}
-            <section className="h-[400px] bg-primary-50">
-                <div className="w-full h-full">
-                    {/* Replace with actual map implementation */}
-                    <div className="w-full h-full bg-primary-100 flex items-center justify-center">
-                        <p className="text-primary-600">Map placeholder</p>
+            {/* Trial Info */}
+            <section className="py-24 bg-primary-50">
+                <Container>
+                    <div className="max-w-4xl mx-auto">
+                        <ScrollReveal>
+                            <h2 className="text-4xl font-serif text-center mb-16">What to Expect</h2>
+                        </ScrollReveal>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            {trialSteps.map((step, index) => (
+                                <ScrollReveal key={step.title} delay={200 * index}>
+                                    <div className="text-center space-y-4">
+                                        <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto text-xl font-medium">
+                                            {index + 1}
+                                        </div>
+                                        <h3 className="text-xl font-medium">{step.title}</h3>
+                                        <p className="text-primary-600">{step.description}</p>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </Container>
             </section>
         </div>
     );
@@ -117,7 +146,8 @@ const Contact = () => {
 const contactInfo = [
     {
         label: "Email",
-        value: "contact@cooleat.com",
+        value: "a.s@Cooleat.eu",
+        link: "mailto:a.s@Cooleat.eu",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -125,8 +155,9 @@ const contactInfo = [
         )
     },
     {
-        label: "Phone",
-        value: "+1 (555) 123-4567",
+        label: "French Mobile",
+        value: "+33 6 77 04 68 51",
+        link: "tel:+33677046851",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -134,14 +165,29 @@ const contactInfo = [
         )
     },
     {
-        label: "Address",
-        value: "123 Innovation Street, Tech City, TC 12345",
+        label: "English Mobile",
+        value: "+44 7467 819 042",
+        link: "tel:+447467819042",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
         )
+    }
+];
+
+const trialSteps = [
+    {
+        title: "Initial Consultation",
+        description: "We'll discuss your needs and assess your space requirements"
+    },
+    {
+        title: "Installation",
+        description: "Quick and seamless setup of your CoolEat smart locker system"
+    },
+    {
+        title: "1-Month Trial",
+        description: "Experience the benefits firsthand with full support from our team"
     }
 ];
 
