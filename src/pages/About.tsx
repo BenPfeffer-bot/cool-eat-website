@@ -48,21 +48,33 @@ const About = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-[#F8F9FA] text-white">
-                <Container>
+            <section className="min-h-[70vh] relative flex items-center">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: 'url("/about-hero.jpg")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                >
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40" />
+                </div>
+                <Container className="relative z-10">
                     <div className="max-w-3xl">
-                        <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
+                        <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6 text-white">
                             Our Mission
                         </AnimatedText>
                         <AnimatedText
                             delay={200}
-                            className="text-xl text-white/80 mb-8"
+                            className="text-xl text-white/90 mb-8"
                         >
                             Empowering sustainable food storage solutions for a better tomorrow
                         </AnimatedText>
                         <Link
                             to="/contact"
-                            className="inline-block px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                            className="inline-block px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
                         >
                             Join Our Mission
                         </Link>

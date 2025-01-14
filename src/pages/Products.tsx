@@ -105,10 +105,22 @@ const Products = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-green-600 text-white">
-                <Container>
+            <section className="min-h-[70vh] relative flex items-center">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: 'url("/fridge_2.png")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                >
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40" />
+                </div>
+                <Container className="relative z-10">
                     <div className="max-w-3xl">
-                        <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
+                        <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6 text-white">
                             Smart Solutions for Every Need
                         </AnimatedText>
                         <AnimatedText
