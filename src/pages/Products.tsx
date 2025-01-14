@@ -120,16 +120,13 @@ const Products = () => {
                 </div>
                 <Container className="relative z-10">
                     <div className="max-w-3xl">
-                        <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                             Smart Solutions for Every Need
-                        </AnimatedText>
-                        <AnimatedText
-                            delay={200}
-                            className="text-xl text-white/90 mb-8"
-                        >
+                        </h1>
+                        <p className="text-xl text-white/90 mb-8">
                             Discover how our innovative storage solutions can transform your space
                             and reduce food waste.
-                        </AnimatedText>
+                        </p>
                         <Link
                             to="/contact"
                             className="inline-block px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
