@@ -81,7 +81,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-green-600 text-white">
+            {/* <section className="min-h-[70vh] relative flex items-center bg-green-600 text-white">
                 <Container>
                     <div className="max-w-3xl">
                         <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
@@ -95,7 +95,7 @@ const Contact = () => {
                         </AnimatedText>
                     </div>
                 </Container>
-            </section>
+            </section> */}
 
             {/* Contact Form Section */}
             <section className="py-24 bg-white">

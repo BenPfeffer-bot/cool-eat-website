@@ -110,7 +110,7 @@ const Products = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("/fridge_2.png")',
+                        backgroundImage: 'url("/public/proto.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}

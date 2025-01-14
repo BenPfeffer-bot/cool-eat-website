@@ -7,10 +7,12 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
