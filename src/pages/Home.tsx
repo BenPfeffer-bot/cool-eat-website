@@ -53,7 +53,7 @@ const latestNews: NewsArticle[] = [
         excerpt: "How our smart lockers are transforming campus dining and reducing food waste.",
         date: "March 15, 2024",
         category: "Case Study",
-        image: "public/fridge.png",
+        image: "/fridge.png",
         slug: "university-food-storage"
     },
     {
@@ -61,7 +61,7 @@ const latestNews: NewsArticle[] = [
         excerpt: "CoolEat expands its reach with a new partnership to tackle food waste.",
         date: "March 10, 2024",
         category: "Partnership",
-        image: "public/Gray Basket Photo.jpg",
+        image: "/Gray Basket Photo.jpg",
         slug: "supermarket-partnership"
     }
 ];

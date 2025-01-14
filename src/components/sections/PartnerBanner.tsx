@@ -4,12 +4,12 @@ import Container from '../layout/Container';
 const partners = [
     {
         name: 'Barclays',
-        logo: '/public/barclays_logo.png',
+        logo: '/barclays_logo.png',
         width: 'w-28',
     },
     {
         name: 'ESCP Business School',
-        logo: '/public/escp_logo.png',
+        logo: '/escp_logo.png',
         width: 'w-32',
     },
 ];
