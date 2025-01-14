@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
         name: 'Vishal',
         role: 'Technical Lead',
         bio: "A Computer Science student at King's College London with experience at IBM and Amadeus, Vishal leads the technical development of CoolEat's smart locker technology and mobile application.",
-        image: '/team-vishal.jpg'
+        image: '/tech_lead_vishal.png'
     }
 ];
 
@@ -48,7 +48,7 @@ const About = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-[#3B5BDB] text-white">
+            <section className="min-h-[70vh] relative flex items-center bg-[#F8F9FA] text-white">
                 <Container>
                     <div className="max-w-3xl">
                         <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
@@ -194,7 +194,7 @@ const About = () => {
             </section>
 
             {/* Contact Section */}
-            <section className="py-24 bg-[#3B5BDB] text-white">
+            <section className="py-24 bg-[#00BFFF] text-white">
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>

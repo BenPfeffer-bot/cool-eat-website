@@ -57,7 +57,7 @@ const News = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-[#3B5BDB] text-white">
+            <section className="min-h-[70vh] relative flex items-center bg-green-600 text-white">
                 <Container>
                     <div className="max-w-3xl">
                         <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
@@ -65,13 +65,13 @@ const News = () => {
                         </AnimatedText>
                         <AnimatedText
                             delay={200}
-                            className="text-xl text-white/80 mb-8"
+                            className="text-xl text-white/90 mb-8"
                         >
                             Stay updated with the latest developments in sustainable food storage solutions
                         </AnimatedText>
                         <Link
                             to="/contact"
-                            className="inline-block px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                            className="inline-block px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
                         >
                             Subscribe to Updates
                         </Link>
@@ -84,10 +84,10 @@ const News = () => {
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-16">
-                            <span className="text-green-500 font-medium text-sm uppercase tracking-wider">
+                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
                                 Featured Story
                             </span>
-                            <h2 className="text-4xl font-bold mt-4 mb-6">
+                            <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
                                 Latest Highlight
                             </h2>
                         </div>
@@ -105,23 +105,23 @@ const News = () => {
                                 </div>
                                 <div className="space-y-6">
                                     <div className="flex items-center space-x-4">
-                                        <span className="text-green-500 font-medium text-sm">
+                                        <span className="text-green-600 font-medium text-sm">
                                             {featuredArticle.category}
                                         </span>
-                                        <span className="text-primary-400 text-sm">
+                                        <span className="text-gray-400 text-sm">
                                             {featuredArticle.date}
                                         </span>
-                                        <span className="text-primary-400 text-sm">
+                                        <span className="text-gray-400 text-sm">
                                             {featuredArticle.readTime}
                                         </span>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-primary group-hover:text-[#3B5BDB] transition-colors">
+                                    <h3 className="text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
                                         {featuredArticle.title}
                                     </h3>
-                                    <p className="text-xl text-primary-600 leading-relaxed">
+                                    <p className="text-xl text-gray-600 leading-relaxed">
                                         {featuredArticle.excerpt}
                                     </p>
-                                    <span className="inline-flex items-center text-[#3B5BDB] font-medium group-hover:translate-x-2 transition-transform">
+                                    <span className="inline-flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform">
                                         Read More
                                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -135,17 +135,17 @@ const News = () => {
             </section>
 
             {/* Recent Articles */}
-            <section className="py-24 bg-primary-50">
+            <section className="py-24 bg-gray-50">
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-16">
-                            <span className="text-green-500 font-medium text-sm uppercase tracking-wider">
+                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
                                 Recent Updates
                             </span>
-                            <h2 className="text-4xl font-bold mt-4 mb-6">
+                            <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
                                 Latest Articles
                             </h2>
-                            <p className="text-lg text-primary-600 leading-relaxed">
+                            <p className="text-lg text-gray-600 leading-relaxed">
                                 Discover our most recent news and updates about sustainable food storage
                             </p>
                         </div>
@@ -165,24 +165,24 @@ const News = () => {
                                         </div>
                                         <div className="p-8 space-y-4">
                                             <div className="flex items-center space-x-4">
-                                                <span className="text-green-500 font-medium text-sm">
+                                                <span className="text-green-600 font-medium text-sm">
                                                     {article.category}
                                                 </span>
-                                                <span className="text-primary-400 text-sm">
+                                                <span className="text-gray-400 text-sm">
                                                     {article.readTime}
                                                 </span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-primary group-hover:text-[#3B5BDB] transition-colors">
+                                            <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
                                                 {article.title}
                                             </h3>
-                                            <p className="text-primary-600">
+                                            <p className="text-gray-600">
                                                 {article.excerpt}
                                             </p>
                                             <div className="pt-4 flex items-center justify-between">
-                                                <span className="text-primary-400 text-sm">
+                                                <span className="text-gray-400 text-sm">
                                                     {article.date}
                                                 </span>
-                                                <span className="text-[#3B5BDB] font-medium group-hover:translate-x-2 transition-transform inline-flex items-center">
+                                                <span className="text-green-600 font-medium group-hover:translate-x-2 transition-transform inline-flex items-center">
                                                     Read More
                                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -199,12 +199,12 @@ const News = () => {
             </section>
 
             {/* Newsletter Section */}
-            <section className="py-24 bg-[#3B5BDB] text-white">
+            <section className="py-24 bg-green-600 text-white">
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
                             <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-                            <p className="text-xl text-white/80 leading-relaxed mb-8">
+                            <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Subscribe to our newsletter to receive the latest updates and insights about sustainable food storage solutions.
                             </p>
                             <form className="max-w-md mx-auto">
@@ -212,11 +212,11 @@ const News = () => {
                                     <input
                                         type="email"
                                         placeholder="Enter your email"
-                                        className="flex-1 px-6 py-3 rounded-lg text-primary bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                                        className="flex-1 px-6 py-3 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
                                     />
                                     <button
                                         type="submit"
-                                        className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                                        className="px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
                                     >
                                         Subscribe
                                     </button>

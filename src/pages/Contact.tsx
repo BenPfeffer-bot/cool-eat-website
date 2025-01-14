@@ -81,7 +81,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="min-h-[70vh] relative flex items-center bg-[#3B5BDB] text-white">
+            <section className="min-h-[70vh] relative flex items-center bg-green-600 text-white">
                 <Container>
                     <div className="max-w-3xl">
                         <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold mb-6">
@@ -89,7 +89,7 @@ const Contact = () => {
                         </AnimatedText>
                         <AnimatedText
                             delay={200}
-                            className="text-xl text-white/80 mb-8"
+                            className="text-xl text-white/90 mb-8"
                         >
                             Experience our smart storage solutions with a 1-month trial. No commitment required.
                         </AnimatedText>
@@ -105,13 +105,13 @@ const Contact = () => {
                         <ScrollReveal>
                             <div className="space-y-12">
                                 <div>
-                                    <span className="text-green-500 font-medium text-sm uppercase tracking-wider">
+                                    <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
                                         Get Started
                                     </span>
-                                    <h2 className="text-4xl font-bold text-primary mt-4 mb-6">
+                                    <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
                                         Schedule Your Trial
                                     </h2>
-                                    <p className="text-xl text-primary-600 leading-relaxed">
+                                    <p className="text-xl text-gray-600 leading-relaxed">
                                         Ready to transform your food storage? Fill out the form and we'll help you
                                         get started with a 1-month trial of our smart storage solution.
                                     </p>
@@ -120,14 +120,14 @@ const Contact = () => {
                                 <div className="space-y-8">
                                     {contactInfo.map((info) => (
                                         <div key={info.label} className="flex items-center space-x-4">
-                                            <div className="w-12 h-12 rounded-full bg-[#3B5BDB]/10 flex items-center justify-center text-[#3B5BDB]">
+                                            <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
                                                 {info.icon}
                                             </div>
                                             <div>
-                                                <p className="text-sm text-primary-400">{info.label}</p>
+                                                <p className="text-sm text-gray-500">{info.label}</p>
                                                 <a
                                                     href={info.link}
-                                                    className="text-lg font-medium text-primary hover:text-[#3B5BDB] transition-colors"
+                                                    className="text-lg font-medium text-gray-900 hover:text-green-600 transition-colors"
                                                 >
                                                     {info.value}
                                                 </a>
@@ -137,33 +137,33 @@ const Contact = () => {
                                 </div>
 
                                 <div className="space-y-6">
-                                    <h3 className="text-2xl font-bold text-primary">What to Expect</h3>
+                                    <h3 className="text-2xl font-bold text-gray-900">What to Expect</h3>
                                     <div className="space-y-4">
                                         <div className="flex items-start space-x-4">
-                                            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white flex-shrink-0">
+                                            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white flex-shrink-0">
                                                 1
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-primary">Initial Consultation</h4>
-                                                <p className="text-primary-600">We'll discuss your needs and find the perfect solution.</p>
+                                                <h4 className="font-semibold text-gray-900">Initial Consultation</h4>
+                                                <p className="text-gray-600">We'll discuss your needs and find the perfect solution.</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start space-x-4">
-                                            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white flex-shrink-0">
+                                            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white flex-shrink-0">
                                                 2
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-primary">Installation</h4>
-                                                <p className="text-primary-600">Quick and hassle-free setup of your smart storage system.</p>
+                                                <h4 className="font-semibold text-gray-900">Installation</h4>
+                                                <p className="text-gray-600">Quick and hassle-free setup of your smart storage system.</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start space-x-4">
-                                            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white flex-shrink-0">
+                                            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white flex-shrink-0">
                                                 3
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-primary">1-Month Trial</h4>
-                                                <p className="text-primary-600">Experience the benefits with full support from our team.</p>
+                                                <h4 className="font-semibold text-gray-900">1-Month Trial</h4>
+                                                <p className="text-gray-600">Experience the benefits with full support from our team.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@ const Contact = () => {
                             <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 rounded-2xl shadow-lg">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div>
-                                        <label htmlFor="firstName" className="block text-sm font-medium text-primary-600 mb-2">
+                                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-600 mb-2">
                                             First Name
                                         </label>
                                         <input
@@ -185,12 +185,12 @@ const Contact = () => {
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                             required
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="lastName" className="block text-sm font-medium text-primary-600 mb-2">
+                                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-600 mb-2">
                                             Last Name
                                         </label>
                                         <input
@@ -199,14 +199,14 @@ const Contact = () => {
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                             required
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-primary-600 mb-2">
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2">
                                         Email
                                     </label>
                                     <input
@@ -215,13 +215,13 @@ const Contact = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-primary-600 mb-2">
+                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-600 mb-2">
                                         Phone
                                     </label>
                                     <input
@@ -230,13 +230,13 @@ const Contact = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="organizationType" className="block text-sm font-medium text-primary-600 mb-2">
+                                    <label htmlFor="organizationType" className="block text-sm font-medium text-gray-600 mb-2">
                                         Organization Type
                                     </label>
                                     <select
@@ -244,7 +244,7 @@ const Contact = () => {
                                         name="organizationType"
                                         value={formData.organizationType}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                         required
                                     >
                                         <option value="">Select your organization type</option>
@@ -257,7 +257,7 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-primary-600 mb-2">
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-2">
                                         Message
                                     </label>
                                     <textarea
@@ -266,7 +266,7 @@ const Contact = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows={4}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B5BDB] transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
                                         placeholder="Tell us about your needs and space requirements..."
                                         required
                                     />
@@ -274,7 +274,7 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full px-8 py-4 bg-[#3B5BDB] text-white rounded-lg font-medium hover:bg-[#3B5BDB]/90 transition-colors"
+                                    className="w-full px-8 py-4 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
                                 >
                                     Schedule Trial
                                 </button>
