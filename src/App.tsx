@@ -1,60 +1,25 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
-
-// Import pages
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
 import Home from './pages/Home';
-import About from './pages/About';
 import Products from './pages/Products';
+import About from './pages/About';
 import News from './pages/News';
 import Contact from './pages/Contact';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="app">
-        <header className="header">
-          <nav className="nav">
-            <div className="logo">Cool Eat</div>
-            <div className="nav-links">
-              <Link to="/">Accueil</Link>
-              <Link to="/about">Qui sommes-nous</Link>
-              <Link to="/products">Produits</Link>
-              <Link to="/news">Actualités</Link>
-              <Link to="/contact">Contact</Link>
-            </div>
-          </nav>
-        </header>
-
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        <footer className="footer">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h4>Contact</h4>
-              <p>📞 +33 (0)1 23 45 67 89</p>
-              <p>✉️ contact@cooleat.fr</p>
-            </div>
-            <div className="footer-section">
-              <h4>Suivez-nous</h4>
-              <div className="social-links">
-                <a href="#instagram">Instagram</a>
-                <a href="#facebook">Facebook</a>
-                <a href="#linkedin">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
     </Router>
   );
-}
+};
 
 export default App;
