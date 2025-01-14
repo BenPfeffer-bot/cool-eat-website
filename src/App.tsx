@@ -14,7 +14,7 @@ function App() {
       <div className="app">
         <header className="header">
           <nav className="nav">
-            <div className="logo">Le Casier Français</div>
+            <div className="logo">Cool Eat</div>
             <div className="nav-links">
               <Link to="/">Accueil</Link>
               <Link to="/about">Qui sommes-nous</Link>
@@ -39,8 +39,8 @@ function App() {
           <div className="footer-content">
             <div className="footer-section">
               <h4>Contact</h4>
-              <p>📞 03 20 96 76 02</p>
-              <p>✉️ contact@lecasierfrancais.fr</p>
+              <p>📞 +33 (0)1 23 45 67 89</p>
+              <p>✉️ contact@cooleat.fr</p>
             </div>
             <div className="footer-section">
               <h4>Suivez-nous</h4>
