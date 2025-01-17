@@ -152,56 +152,165 @@ const Products = () => {
                 </Container>
             </section>
 
-            {/* Problems Section */}
-            <section className="py-24 bg-white" aria-labelledby="problems-title">
+            {/* Origin Story Section */}
+            <section className="py-24 bg-white overflow-hidden" aria-labelledby="story-title">
                 <Container>
                     {/* Section Header */}
-                    <div className="max-w-3xl mx-auto text-center mb-16">
+                    <div className="max-w-3xl mx-auto text-center mb-20">
                         <ScrollReveal>
                             <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
-                                Current Challenges
+                                Our Story
                             </span>
                             <h2
-                                id="problems-title"
+                                id="story-title"
                                 className="text-4xl font-bold text-gray-900 mt-4 mb-6"
                             >
-                                Problems We're Solving
+                                <AnimatedText>How CoolEat Was Born</AnimatedText>
                             </h2>
-                            <p className="text-lg text-gray-600 leading-relaxed">
-                                Every day, workplaces face these common food storage challenges.
-                                Our mission is to address them with smart solutions.
-                            </p>
                         </ScrollReveal>
                     </div>
 
-                    {/* Problems Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                        {problems.map((problem, index) => (
-                            <ScrollReveal
-                                key={problem.title}
-                                delay={index * 100}
-                            >
-                                <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl 
-                                    bg-white shadow-sm hover:shadow-md transition-all duration-300
-                                    border border-gray-100 hover:border-green-100 group h-full">
-                                    <div className="w-16 sm:w-20 lg:w-24 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                                        {problem.icon}
+                    {/* Story Timeline */}
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* Connecting Line */}
+                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-green-100 via-green-300 to-green-100" />
+
+                        {/* Story Segments */}
+                        <div className="space-y-24">
+                            {/* The Problem */}
+                            <ScrollReveal>
+                                <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
+                                    <div className="relative z-10">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
+                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                                1
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Student Experience</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                As a student across different universities and countries, I consistently faced the same challenge: 
+                                                there was never a convenient place to store lunch during the day. Food would get warm, 
+                                                containers would leak in bags, and carrying both work and food bags became cumbersome.
+                                            </p>
+                                            <div className="flex items-center space-x-4 text-sm text-gray-500">
+                                                <div className="flex items-center">
+                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                                    </svg>
+                                                    Multiple bags
+                                                </div>
+                                                <div className="flex items-center">
+                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                                    </svg>
+                                                    Warm food
+                                                </div>
+                                                <div className="flex items-center">
+                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                                    </svg>
+                                                    Leaking containers
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4 group-hover:text-green-600 transition-colors">
-                                        {problem.title}
-                                    </h3>
-                                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                                        {problem.description}
-                                    </p>
+                                    <div className="relative">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                            <img
+                                                src="/fridge_2.png"
+                                                alt="Student lunch storage problems"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </ScrollReveal>
-                        ))}
+
+                            {/* The Solution */}
+                            <ScrollReveal>
+                                <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:grid-flow-dense">
+                                    <div className="relative lg:col-start-2">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
+                                            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                                2
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">The CoolEat Solution</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                What if you could store your meals in a secure, temperature-controlled locker? 
+                                                CoolEat was born: a smart locker fridge connected via a web application, 
+                                                keeping your food fresh and accessible throughout the day.
+                                            </p>
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="bg-green-50 rounded-lg p-4">
+                                                    <div className="font-semibold text-green-600 mb-1">Secure Storage</div>
+                                                    <div className="text-sm text-gray-600">Personal access via web app</div>
+                                                </div>
+                                                <div className="bg-green-50 rounded-lg p-4">
+                                                    <div className="font-semibold text-green-600 mb-1">Temperature Control</div>
+                                                    <div className="text-sm text-gray-600">Keep food fresh all day</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative lg:col-start-1">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                            <img
+                                                src="/fridge.png"
+                                                alt="CoolEat smart locker solution"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+
+                            {/* The Impact */}
+                            <ScrollReveal>
+                                <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
+                                    <div className="relative z-10">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
+                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                                3
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Beyond Convenience</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                CoolEat isn't just about convenience – it's about sustainability and wellbeing. 
+                                                We're partnering with cafeterias to reduce food waste by providing a platform 
+                                                to sell leftover food instead of throwing it away.
+                                            </p>
+                                            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6">
+                                                <div className="text-3xl font-bold text-green-600 mb-2">40%</div>
+                                                <div className="text-sm text-gray-600">Reduction in food waste through smart management and partnerships</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                            <img
+                                                src="/zero waste.png"
+                                                alt="Sustainability impact"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+                        </div>
                     </div>
 
-                    {/* Footnote */}
-                    <div className="mt-12 text-center text-sm text-gray-500">
-                        <p>* Based on workplace survey conducted in 2024</p>
-                    </div>
+                    {/* Call to Action */}
+                    <ScrollReveal>
+                        <div className="mt-24 text-center">
+                            <Link
+                                to="/contact"
+                                className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-300 group shadow-lg"
+                            >
+                                <span className="text-lg">Join Our Journey</span>
+                                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </Link>
+                        </div>
+                    </ScrollReveal>
                 </Container>
             </section>
 
