@@ -63,19 +63,10 @@ const Navbar: React.FC = () => {
                             <img
                                 src="/logo.png"
                                 alt=""
-                                className="h-20 w-auto transform transition-all duration-300 group-hover:scale-110"
+                                className="h-24 w-auto transform transition-all duration-300 group-hover:scale-110"
                                 loading="eager"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-green-200/0 via-green-200/30 to-green-200/0 opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-full transition-all duration-1000" />
-                        </div>
-                        <div className="ml-3 flex flex-col">
-                            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent transform transition-all duration-300 group-hover:scale-105">
-                                Cool
-                                <span className="text-gray-800">Eat</span>
-                            </span>
-                            <span className="text-sm text-gray-600 font-medium tracking-wide transform transition-all duration-300 group-hover:text-green-600">
-                                Smart Food Storage
-                            </span>
                         </div>
                     </Link>
 

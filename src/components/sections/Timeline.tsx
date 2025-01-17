@@ -3,9 +3,9 @@ import ScrollReveal from '../ui/ScrollReveal';
 
 const timelineEvents = [
     {
-        date: '2023 Q3',
-        title: 'Company Foundation',
-        description: 'CoolEat was founded with a vision to revolutionize food storage and reduce waste.',
+        date: '2024 Q3',
+        title: 'ESCP Business School Incubator',
+        description: 'CoolEat was part of ESCP Incubator "BlueFactory", allowing proper support to build our foundation.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -14,9 +14,9 @@ const timelineEvents = [
         status: 'completed'
     },
     {
-        date: '2023 Q4',
-        title: 'First Prototype',
-        description: 'Developed and tested our first smart locker prototype at ESCP Business School.',
+        date: '2024 Q4',
+        title: 'Company Foundation',
+        description: 'CoolEat was founded with a vision to revolutionize food storage and reduce waste.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -25,8 +25,8 @@ const timelineEvents = [
         status: 'completed'
     },
     {
-        date: '2024 Q1',
-        title: 'Barclays Partnership',
+        date: '2025 Q1',
+        title: 'Barclays Eagle Lab and Product Builder Program',
         description: 'Strategic partnership with Barclays to implement smart lockers in corporate offices.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,9 +36,9 @@ const timelineEvents = [
         status: 'completed'
     },
     {
-        date: '2024 Q2',
-        title: 'University Expansion',
-        description: 'Launching smart locker solutions across multiple university campuses.',
+        date: '2025 Q2',
+        title: 'MVP, First prototype, test web application ',
+        description: 'Elaboration of the prototype and understanding of the potential entry in the market.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -47,9 +47,9 @@ const timelineEvents = [
         status: 'in-progress'
     },
     {
-        date: '2024 Q3',
+        date: '2025 Q3',
         title: 'Mobile App Launch',
-        description: 'Release of our mobile app for seamless locker access and management.',
+        description: 'Deployement of the applications on IOS, Android.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -58,8 +58,8 @@ const timelineEvents = [
         status: 'planned'
     },
     {
-        date: '2024 Q4',
-        title: 'European Expansion',
+        date: '2025 Q4',
+        title: 'Supermarkets/University expansions',
         description: 'Expanding our services to major European cities.',
         icon: (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

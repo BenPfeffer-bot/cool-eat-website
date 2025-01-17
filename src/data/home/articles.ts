@@ -13,7 +13,7 @@ export const homeArticles: HomeArticle[] = [
         id: '1',
         title: 'Revolutionizing Food Storage',
         description: 'Discover how our smart locker system is transforming workplace food storage and reducing waste.',
-        image: '/proto.jpg',
+        image: '/proto_.png',
         link: '/products',
         category: 'Innovation',
         date: 'March 2024'

@@ -89,7 +89,7 @@ const Home: React.FC<HomeProps> = () => {
                         </p>
                         <Link
                             to="/contact"
-                            className="mobile-link inline-block px-6 sm:px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                            className="mobile-link inline-block px-6 sm:px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                         >
                             Start Trial
                         </Link>
@@ -106,7 +106,7 @@ const Home: React.FC<HomeProps> = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
                         <ScrollReveal>
                             <div className="space-y-4 sm:space-y-6">
-                                <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                                <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">
                                     Our Impact
                                 </span>
                                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -118,17 +118,17 @@ const Home: React.FC<HomeProps> = () => {
                                 </p>
                                 <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-4 sm:pt-8">
                                     <div>
-                                        <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">90%</div>
+                                        <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">90%</div>
                                         <p className="text-sm sm:text-base text-gray-600">Reduction in food waste</p>
                                     </div>
                                     <div>
-                                        <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">2000+</div>
+                                        <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">0</div>
                                         <p className="text-sm sm:text-base text-gray-600">Active users</p>
                                     </div>
                                 </div>
                                 <Link
                                     to="/about"
-                                    className="mobile-link inline-block px-6 sm:px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors mt-6 sm:mt-8"
+                                    className="mobile-link inline-block px-6 sm:px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mt-6 sm:mt-8"
                                 >
                                     Learn More
                                 </Link>
@@ -153,7 +153,7 @@ const Home: React.FC<HomeProps> = () => {
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                            <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">
                                 Our Features
                             </span>
                             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
@@ -169,11 +169,11 @@ const Home: React.FC<HomeProps> = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
                         {features.map((feature, index) => (
                             <ScrollReveal key={feature.title} delay={index * 100}>
-                                <div className="touch-feedback text-center space-y-4 p-4 sm:p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-100 group">
-                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-50 flex items-center justify-center text-green-600 mx-auto mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                                <div className="touch-feedback text-center space-y-4 p-4 sm:p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100 group">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mx-auto mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300">
                                         {feature.icon}
                                     </div>
-                                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                                         {feature.title}
                                     </h3>
                                     <p className="text-sm sm:text-base text-gray-600">
@@ -190,7 +190,7 @@ const Home: React.FC<HomeProps> = () => {
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                            <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">
                                 Latest News
                             </span>
                             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
@@ -218,20 +218,20 @@ const Home: React.FC<HomeProps> = () => {
                                         </div>
                                         <div className="p-4 sm:p-6 md:p-8">
                                             <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                                                <span className="text-green-600 font-medium text-sm">
+                                                <span className="text-blue-600 font-medium text-sm">
                                                     {article.category}
                                                 </span>
                                                 <span className="text-gray-400 text-sm">
                                                     {article.date}
                                                 </span>
                                             </div>
-                                            <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors mb-3 sm:mb-4">
+                                            <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 sm:mb-4">
                                                 {article.title}
                                             </h3>
                                             <p className="text-sm sm:text-base text-gray-600 mb-4">
                                                 {article.excerpt}
                                             </p>
-                                            <span className="inline-flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform">
+                                            <span className="inline-flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform">
                                                 Read More
                                                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -249,7 +249,7 @@ const Home: React.FC<HomeProps> = () => {
             {/* Featured Articles */}
             <HomeArticles />
             {/* CTA Section */}
-            <section className="py-16 sm:py-20 md:py-24 bg-green-600 text-white">
+            <section className="py-16 sm:py-20 md:py-24 bg-blue-600 text-white">
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
@@ -260,7 +260,7 @@ const Home: React.FC<HomeProps> = () => {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
                                     to="/contact"
-                                    className="mobile-link px-6 sm:px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                                    className="mobile-link px-6 sm:px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                                 >
                                     Start Free Trial
                                 </Link>

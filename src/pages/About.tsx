@@ -34,12 +34,12 @@ const teamMembers: TeamMember[] = [
 
 const sustainabilityGoals: SustainabilityGoal[] = [
     {
-        icon: '/logo_resp.webp',
+        icon: '/12_eco.png',
         title: 'Responsible Consumption',
         description: 'Promoting sustainable practices by reducing food waste and encouraging responsible consumption patterns.'
     },
     {
-        icon: '/sdg13.png',
+        icon: '/13_eco.png',
         title: 'Climate Action',
         description: 'Contributing to climate action by reducing food waste and its associated environmental impact.'
     }
@@ -54,7 +54,7 @@ const About = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("/responsable_consump.webp")',
+                        backgroundImage: 'url("/zero waste.png")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
@@ -87,7 +87,7 @@ const About = () => {
                         <ScrollReveal direction="left">
                             <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="/mission.webp"
+                                    src="/fridge_2.png"
                                     alt="Our Mission"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                                 />
@@ -121,7 +121,7 @@ const About = () => {
                 <Container>
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center mb-16">
-                            <span className="text-green-500 font-medium text-sm uppercase tracking-wider">
+                            <span className="text-blue-500 font-medium text-sm uppercase tracking-wider">
                                 Environmental Impact
                             </span>
                             <h2 className="text-4xl font-bold mt-4 mb-6">

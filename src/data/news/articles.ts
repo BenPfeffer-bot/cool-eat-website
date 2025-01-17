@@ -25,13 +25,11 @@ export const newsArticles: NewsArticle[] = [
             - Real-time monitoring capabilities
             - Energy-efficient operation
 
-            The system has already been successfully implemented at several leading universities, with remarkable results in reducing food waste and improving student satisfaction.
-
-            We're committed to expanding this solution to more educational institutions across the country, making sustainable food storage accessible to all students.
+            The test phase will be launched on ESCP Business Shool, London campus, for one month trial, to reduce food waste and improve student wellbeing.
         `,
         category: 'Product Launch',
-        readTime: '3 min read',
-        image: '/launch.jpg',
+        readTime: '1 min read',
+        image: '/school.png',
         slug: 'cooleat-launches-university-solution'
     },
     {
@@ -53,7 +51,7 @@ export const newsArticles: NewsArticle[] = [
             The implementation of our system has not only reduced waste but also opened up new opportunities for restaurants to optimize their operations and better serve their customers.
         `,
         category: 'Case Study',
-        readTime: '5 min read',
+        readTime: '1 min read',
         image: '/fruits.jpg',
         slug: 'reducing-restaurant-food-waste'
     },

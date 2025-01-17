@@ -125,7 +125,7 @@ const Products = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: 'url("/proto.jpg")',
+                        backgroundImage: 'url("/food_2.png")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
@@ -200,7 +200,7 @@ const Products = () => {
 
                     {/* Footnote */}
                     <div className="mt-12 text-center text-sm text-gray-500">
-                        <p>* Based on workplace survey conducted in 2023</p>
+                        <p>* Based on workplace survey conducted in 2024</p>
                     </div>
                 </Container>
             </section>

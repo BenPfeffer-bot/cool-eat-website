@@ -17,7 +17,8 @@ interface OrganizationType {
 const organizationTypes: OrganizationType[] = [
     { value: 'supermarket', label: 'Supermarket/Local Shop' },
     { value: 'university', label: 'University/Open Space' },
-    { value: 'restaurant', label: 'Local Restaurant' }
+    { value: 'restaurant', label: 'Local Restaurant' },
+    { value: 'others', label: 'Others' },
 ];
 
 const contactInfo: ContactInfo[] = [
