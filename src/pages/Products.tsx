@@ -26,28 +26,6 @@ interface ProductFeature {
     image: string;
 }
 
-const problems: Problem[] = [
-    {
-        icon: <FridgeIcon />,
-        title: 'Food Spoilage',
-        description: 'Food should not be left out at room temperature for more than 2 hours'
-    },
-    {
-        icon: <LunchboxIcon />,
-        title: 'Inconvenient Storage',
-        description: 'Storing meals in your bag can get messy, it could leak, ruin your bag and your lunch'
-    },
-    {
-        icon: <TheftIcon />,
-        title: 'Food Theft',
-        description: '25%* of workers fully located in offices in the UK have experienced food theft in the workplace'
-    },
-    {
-        icon: <WasteIcon />,
-        title: 'Food Waste',
-        description: 'Bars and cafeterias in most workplaces throw away the unsold food at closing time'
-    }
-];
 
 const solutions: Solution[] = [
     {
@@ -216,7 +194,7 @@ const Products = () => {
                                     <div className="relative">
                                         <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
                                             <img
-                                                src="/fridge_2.png"
+                                                src="/Unhappy-child.jpg"
                                                 alt="Student lunch storage problems"
                                                 className="w-full h-full object-cover"
                                             />

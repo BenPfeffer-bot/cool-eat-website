@@ -272,6 +272,164 @@ const Contact = () => {
                     </div>
                 </Container>
             </section>
+
+            {/* FAQ Section */}
+            <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+                <Container>
+                    <div className="max-w-4xl mx-auto">
+                        <ScrollReveal>
+                            <div className="text-center mb-16">
+                                <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                                    Help Center
+                                </span>
+                                <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
+                                    Frequently Asked Questions
+                                </h2>
+                                <p className="text-lg text-gray-600">
+                                    Everything you need to know about using CoolEat
+                                </p>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Important Notice */}
+                        <ScrollReveal>
+                            <div className="bg-green-50 rounded-2xl p-6 mb-12">
+                                <h3 className="text-xl font-semibold text-green-800 mb-4">Keep in Mind</h3>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start">
+                                        <svg className="w-6 h-6 text-green-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span className="text-green-800">Lockers are available on a first-come, first-serve basis.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg className="w-6 h-6 text-green-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span className="text-green-800">There are 13 lockers only. If all lockers are taken, you can register your interest by adding your email to the waitlist on our web application.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* FAQ Accordion */}
+                        <div className="space-y-4">
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How do I use CoolEat for my lunchbox?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6 space-y-4">
+                                        <ol className="list-decimal list-inside space-y-3 text-gray-600 ml-4">
+                                            <li>Scan the QR code on the locker fridge.</li>
+                                            <li>Log in to the web application.</li>
+                                            <li>Choose a subscription model that fits your needs.</li>
+                                            <li>Store your lunchbox in a designated locker.</li>
+                                            <li>You'll receive an email confirmation with your assigned locker number.</li>
+                                            <li>To retrieve your lunchbox, unlock the locker using the web application.</li>
+                                            <li>Enjoy your lunch!</li>
+                                        </ol>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How do I use CoolEat to buy meals from cafeterias or supermarkets?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6 space-y-4">
+                                        <ol className="list-decimal list-inside space-y-3 text-gray-600 ml-4">
+                                            <li>Scan the QR code on the locker fridge.</li>
+                                            <li>Log in to the web application.</li>
+                                            <li>Browse the available lockers and select the meal you want.</li>
+                                            <li>Make the payment via the web application.</li>
+                                            <li>Unlock the locker using the web application.</li>
+                                            <li>Enjoy your meal!</li>
+                                        </ol>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How do I use CoolEat to buy meals from local restaurants?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6 space-y-4">
+                                        <ol className="list-decimal list-inside space-y-3 text-gray-600 ml-4">
+                                            <li>Scan the QR code on the locker fridge.</li>
+                                            <li>Log in to the web application.</li>
+                                            <li>Before 10 AM on weekdays, select the meal you want from the web application from our local restaurants partners.</li>
+                                            <li>Pay for the meal via the web application.</li>
+                                            <li>You'll receive an email confirmation with your assigned locker number.</li>
+                                            <li>Your meal will be delivered directly to your locker.</li>
+                                            <li>Unlock the locker using the web application.</li>
+                                            <li>Enjoy your meal!</li>
+                                        </ol>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How do I reach CoolEat customer service?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">
+                                            Email us at{' '}
+                                            <a href="mailto:contact@cooleat.eu" className="text-green-600 hover:text-green-700 transition-colors">
+                                                contact@cooleat.eu
+                                            </a>
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+                        </div>
+                    </div>
+                </Container>
+            </section>
         </div>
     );
 };
