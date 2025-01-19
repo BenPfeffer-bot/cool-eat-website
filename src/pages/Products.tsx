@@ -4,6 +4,7 @@ import AnimatedText from '../components/ui/AnimatedText';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { FridgeIcon, LunchboxIcon, TheftIcon, WasteIcon } from '../components/icons/ProblemIcons';
 import { SafeHygenicIcon, NoExtraBagsIcon, SecureStorageIcon, MinimizeWasteIcon } from '../components/icons/SolutionIcons';
+import { useState, useEffect } from 'react';
 
 interface Problem {
     icon: JSX.Element;
@@ -95,6 +96,23 @@ const productFeatures: ProductFeature[] = [
 ];
 
 const Products = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [sliderRef, setSliderRef] = useState<HTMLDivElement | null>(null);
+
+    const handlePrevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? productFeatures.length - 1 : prev - 1));
+    };
+
+    const handleNextSlide = () => {
+        setCurrentSlide((prev) => (prev === productFeatures.length - 1 ? 0 : prev + 1));
+    };
+
+    useEffect(() => {
+        if (sliderRef) {
+            sliderRef.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    }, [currentSlide, sliderRef]);
+
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
@@ -109,20 +127,22 @@ const Products = () => {
                     }}
                 >
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
                 </div>
                 <Container className="relative z-10">
-                    <div className="max-w-3xl">
+                    <div className="max-w-3xl animate-fade-in">
                         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                            Smart Solutions for Every Need
+                            <span className="inline-block animate-float">Smart</span>{" "}
+                            <span className="inline-block animate-float-delayed">Solutions</span>{" "}
+                            <span className="bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent inline-block animate-float-more-delayed">for Every Need</span>
                         </h1>
-                        <p className="text-xl text-white/90 mb-8">
+                        <p className="text-xl text-white/90 mb-8 animate-fade-in-up max-w-2xl">
                             Discover how our innovative storage solutions can transform your space
                             and reduce food waste.
                         </p>
                         <Link
                             to="/contact"
-                            className="inline-block px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                            className="inline-block px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-green text-white rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium animate-fade-in-up"
                         >
                             Start Free Trial
                         </Link>
@@ -136,14 +156,16 @@ const Products = () => {
                     {/* Section Header */}
                     <div className="max-w-3xl mx-auto text-center mb-20">
                         <ScrollReveal>
-                            <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                            <span className="inline-block px-4 py-1 bg-gradient-to-r from-brand-blue/10 to-brand-green/10 text-brand-blue rounded-full text-sm font-medium mb-4">
                                 Our Story
                             </span>
                             <h2
                                 id="story-title"
-                                className="text-4xl font-bold text-gray-900 mt-4 mb-6"
+                                className="text-4xl font-bold mt-4 mb-6"
                             >
-                                <AnimatedText>How CoolEat Was Born</AnimatedText>
+                                <span className="bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent">
+                                    How CoolEat Was Born
+                                </span>
                             </h2>
                         </ScrollReveal>
                     </div>
@@ -151,7 +173,7 @@ const Products = () => {
                     {/* Story Timeline */}
                     <div className="relative max-w-6xl mx-auto">
                         {/* Connecting Line */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-green-100 via-green-300 to-green-100" />
+                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-brand-blue/20 via-brand-green/40 to-brand-blue/20" />
 
                         {/* Story Segments */}
                         <div className="space-y-24">
@@ -159,11 +181,13 @@ const Products = () => {
                             <ScrollReveal>
                                 <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
                                     <div className="relative z-10">
-                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
-                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-brand-blue/10 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
                                                 1
                                             </div>
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Student Experience</h3>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-brand-green group-hover:bg-clip-text group-hover:text-transparent transition-colors">
+                                                The Student Experience
+                                            </h3>
                                             <p className="text-gray-600 leading-relaxed mb-6">
                                                 As a student across different universities and countries, I consistently faced the same challenge: 
                                                 there was never a convenient place to store lunch during the day. Food would get warm, 
@@ -171,19 +195,19 @@ const Products = () => {
                                             </p>
                                             <div className="flex items-center space-x-4 text-sm text-gray-500">
                                                 <div className="flex items-center">
-                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className="w-5 h-5 mr-2 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                     </svg>
                                                     Multiple bags
                                                 </div>
                                                 <div className="flex items-center">
-                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className="w-5 h-5 mr-2 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                     </svg>
                                                     Warm food
                                                 </div>
                                                 <div className="flex items-center">
-                                                    <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <svg className="w-5 h-5 mr-2 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                     </svg>
                                                     Leaking containers
@@ -192,12 +216,13 @@ const Products = () => {
                                         </div>
                                     </div>
                                     <div className="relative">
-                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg group">
                                             <img
                                                 src="/Unhappy-child.jpg"
                                                 alt="Student lunch storage problems"
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                             />
+                                            <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         </div>
                                     </div>
                                 </div>
@@ -207,35 +232,46 @@ const Products = () => {
                             <ScrollReveal>
                                 <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:grid-flow-dense">
                                     <div className="relative lg:col-start-2">
-                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
-                                            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-brand-blue/10 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+                                            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
                                                 2
                                             </div>
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">The CoolEat Solution</h3>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-brand-green group-hover:bg-clip-text group-hover:text-transparent transition-colors">
+                                                The CoolEat Solution
+                                            </h3>
                                             <p className="text-gray-600 leading-relaxed mb-6">
                                                 What if you could store your meals in a secure, temperature-controlled locker? 
                                                 CoolEat was born: a smart locker fridge connected via a web application, 
                                                 keeping your food fresh and accessible throughout the day.
                                             </p>
                                             <div className="grid grid-cols-2 gap-4">
-                                                <div className="bg-green-50 rounded-lg p-4">
-                                                    <div className="font-semibold text-green-600 mb-1">Secure Storage</div>
-                                                    <div className="text-sm text-gray-600">Personal access via web app</div>
+                                                <div className="bg-gradient-to-r from-brand-blue/5 to-brand-green/5 rounded-lg p-4 group">
+                                                    <div className="font-semibold bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent mb-1">
+                                                        Secure Storage
+                                                    </div>
+                                                    <div className="text-sm text-gray-600">
+                                                        Personal access via web app
+                                                    </div>
                                                 </div>
-                                                <div className="bg-green-50 rounded-lg p-4">
-                                                    <div className="font-semibold text-green-600 mb-1">Temperature Control</div>
-                                                    <div className="text-sm text-gray-600">Keep food fresh all day</div>
+                                                <div className="bg-gradient-to-r from-brand-blue/5 to-brand-green/5 rounded-lg p-4 group">
+                                                    <div className="font-semibold bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent mb-1">
+                                                        Temperature Control
+                                                    </div>
+                                                    <div className="text-sm text-gray-600">
+                                                        Keep food fresh all day
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="relative lg:col-start-1">
-                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg group">
                                             <img
                                                 src="/fridge.png"
                                                 alt="CoolEat smart locker solution"
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                             />
+                                            <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         </div>
                                     </div>
                                 </div>
@@ -245,29 +281,34 @@ const Products = () => {
                             <ScrollReveal>
                                 <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
                                     <div className="relative z-10">
-                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100 transform hover:-translate-y-1 transition-all duration-300">
-                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
+                                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-brand-blue/10 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+                                            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center text-white font-bold border-4 border-white">
                                                 3
                                             </div>
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Beyond Convenience</h3>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-brand-green group-hover:bg-clip-text group-hover:text-transparent transition-colors">
+                                                Beyond Convenience
+                                            </h3>
                                             <p className="text-gray-600 leading-relaxed mb-6">
                                                 CoolEat isn't just about convenience – it's about sustainability and wellbeing. 
                                                 We're partnering with cafeterias to reduce food waste by providing a platform 
                                                 to sell leftover food instead of throwing it away.
                                             </p>
-                                            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6">
-                                                <div className="text-3xl font-bold text-green-600 mb-2">40%</div>
-                                                <div className="text-sm text-gray-600">Reduction in food waste through smart management and partnerships</div>
+                                            <div className="bg-gradient-to-r from-brand-blue/5 to-brand-green/5 rounded-xl p-6">
+                                                <div className="text-3xl font-bold bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent mb-2">40%</div>
+                                                <div className="text-sm text-gray-600">
+                                                    Reduction in food waste through smart management and partnerships
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="relative">
-                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
+                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg group">
                                             <img
                                                 src="/zero waste.png"
                                                 alt="Sustainability impact"
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                             />
+                                            <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         </div>
                                     </div>
                                 </div>
@@ -280,7 +321,7 @@ const Products = () => {
                         <div className="mt-24 text-center">
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-300 group shadow-lg"
+                                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-green text-white rounded-xl hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
                             >
                                 <span className="text-lg">Join Our Journey</span>
                                 <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -388,76 +429,162 @@ const Products = () => {
             {/* Product Features */}
             <section className="py-24 bg-white">
                 <Container>
-                    <div className="space-y-16 sm:space-y-24 lg:space-y-32">
-                        {productFeatures.map((feature, index) => (
-                            <ScrollReveal key={feature.title}>
-                                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                                    <div className={`space-y-4 sm:space-y-6 lg:space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                                            {feature.title}
-                                        </h2>
-                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                                            {feature.description}
-                                        </p>
-                                        <ul className="space-y-2 sm:space-y-4">
-                                            {feature.benefits.map((benefit) => (
-                                                <li key={benefit} className="flex items-center space-x-3">
-                                                    <svg className="w-4 sm:w-5 h-4 sm:h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                                    </svg>
-                                                    <span className="text-sm sm:text-base text-gray-600">{benefit}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        <div className="pt-4">
-                                            <Link
-                                                to="/contact"
-                                                className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-green-600 text-white text-sm sm:text-base rounded-lg hover:bg-green-700 transition-colors"
-                                            >
-                                                Learn More
-                                            </Link>
+                    <ScrollReveal>
+                        <div className="max-w-3xl mx-auto text-center mb-16">
+                            <span className="inline-block px-4 py-1 bg-gradient-to-r from-brand-blue/10 to-brand-green/10 text-brand-blue rounded-full text-sm font-medium mb-4">
+                                Our Solutions
+                            </span>
+                            <h2 className="text-4xl font-bold mt-4 mb-6">
+                                <span className="bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent">
+                                    Smart Storage Solutions
+                                </span>
+                            </h2>
+                            <p className="text-lg text-gray-600 leading-relaxed">
+                                Discover how our innovative solutions can benefit your business
+                            </p>
+                        </div>
+                    </ScrollReveal>
+
+                    {/* Slider Section */}
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* Slider Container */}
+                        <div className="overflow-hidden">
+                            <div 
+                                ref={setSliderRef}
+                                className="flex transition-transform duration-500 ease-out"
+                                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                            >
+                                {productFeatures.map((feature, index) => (
+                                    <div key={feature.title} className="w-full flex-shrink-0 flex-grow-0" style={{ minWidth: '100%' }}>
+                                        <div className="px-4 mx-auto max-w-6xl">
+                                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
+                                                <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+                                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                                        <span className="bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent">
+                                                            {feature.title}
+                                                        </span>
+                                                    </h2>
+                                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                                                        {feature.description}
+                                                    </p>
+                                                    <ul className="space-y-2 sm:space-y-4">
+                                                        {feature.benefits.map((benefit) => (
+                                                            <li key={benefit} className="flex items-center space-x-3">
+                                                                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-brand-blue to-brand-green flex items-center justify-center">
+                                                                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                                    </svg>
+                                                                </div>
+                                                                <span className="text-sm sm:text-base text-gray-600">{benefit}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                    <div className="pt-4">
+                                                        <Link
+                                                            to="/contact"
+                                                            className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-brand-blue to-brand-green text-white rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                                        >
+                                                            Learn More
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                                                    <div className="aspect-4/3 group">
+                                                        <img
+                                                            src={feature.image}
+                                                            alt={feature.title}
+                                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                                            loading="lazy"
+                                                            width="800"
+                                                            height="600"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                                        <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
-                                            <img
-                                                src={feature.image}
-                                                alt={feature.title}
-                                                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                                                loading="lazy"
-                                                width="800"
-                                                height="600"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-                        ))}
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Navigation Buttons */}
+                        <div className="absolute top-1/2 -translate-y-1/2 flex justify-between w-full px-4">
+                            <button
+                                className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-gray-800 hover:text-brand-blue transform hover:scale-105"
+                                onClick={handlePrevSlide}
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button
+                                className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-gray-800 hover:text-brand-blue transform hover:scale-105"
+                                onClick={handleNextSlide}
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        {/* Dots Navigation */}
+                        <div className="flex justify-center space-x-2 mt-8">
+                            {productFeatures.map((_, index) => (
+                                <button
+                                    key={index}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                        currentSlide === index 
+                                            ? 'bg-gradient-to-r from-brand-blue to-brand-green w-8' 
+                                            : 'bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                                    onClick={() => setCurrentSlide(index)}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </Container>
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-green-600">
-                <Container>
+            <section className="relative py-24 sm:py-32 overflow-hidden">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-green to-brand-blue animate-gradient-xy opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/50 via-transparent to-brand-green/50 mix-blend-overlay animate-gradient-x" />
+                
+                {/* Animated overlay patterns */}
+                <div className="absolute inset-0">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent_25%)] animate-pulse-slow" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(255,255,255,0.2),transparent_25%)] animate-pulse-slow delay-700" />
+                </div>
+
+                <Container className="relative">
                     <div className="max-w-3xl mx-auto text-center">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-bold text-white mb-6">
+                            <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 animate-float">
+                                Join the Future of Food Storage
+                            </span>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white animate-blur-in">
                                 Ready to Get Started?
                             </h2>
-                            <p className="text-xl text-white/90 mb-8">
-                                Transform your space with our smart storage solutions. Start your 1-month trial today.
+                            <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 animate-fade-in-up">
+                                Transform your space with our smart storage solutions.
+                                <br className="hidden sm:block" />
+                                Start your 1-month trial today.
                             </p>
-                            <div className="flex flex-wrap gap-4 justify-center">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                 <Link
                                     to="/contact"
-                                    className="px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                                    className="group relative px-8 sm:px-10 py-4 bg-white/90 backdrop-blur overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up"
                                 >
-                                    Start Free Trial
+                                    <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-green opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    <span className="relative font-semibold group-hover:text-white transition-colors duration-500 bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent">
+                                        Start Free Trial
+                                    </span>
                                 </Link>
                                 <Link
                                     to="/contact"
-                                    className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors"
+                                    className="group px-8 sm:px-10 py-4 border-2 border-white/50 hover:border-white text-white rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-500 font-semibold animate-fade-in-up delay-100"
                                 >
                                     Contact Sales
                                 </Link>
@@ -465,6 +592,10 @@ const Products = () => {
                         </ScrollReveal>
                     </div>
                 </Container>
+
+                {/* Decorative elements */}
+                <div className="absolute left-0 bottom-0 w-24 h-24 md:w-32 md:h-32 bg-white/5 rounded-tr-3xl blur-2xl animate-float" />
+                <div className="absolute right-0 top-0 w-32 h-32 md:w-40 md:h-40 bg-white/5 rounded-bl-3xl blur-2xl animate-float-delayed" />
             </section>
         </div>
     );

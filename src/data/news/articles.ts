@@ -13,7 +13,7 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
     {
         id: '1',
-        date: 'March 15, 2024',
+        date: '2025',
         title: 'CoolEat Launches Smart Locker Solution for Universities',
         excerpt: 'Introducing our innovative food storage solution designed specifically for university campuses, helping students maintain food freshness and reduce waste.',
         content: `
@@ -34,7 +34,7 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: '2',
-        date: 'March 10, 2024',
+        date: '2025',
         title: 'Reducing Food Waste in Local Restaurants',
         excerpt: 'How our smart locker system is helping local restaurants minimize food waste while maintaining full price margins on their deliveries.',
         content: `
@@ -57,7 +57,7 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: '3',
-        date: 'March 5, 2024',
+        date: '2025',
         title: 'Partnership with Leading Supermarket Chain',
         excerpt: 'CoolEat partners with a major supermarket chain to implement smart storage solutions for surplus food management.',
         content: `
@@ -82,7 +82,7 @@ export const newsArticles: NewsArticle[] = [
 
 export const featuredArticle: NewsArticle = {
     id: '4',
-    date: 'March 20, 2024',
+    date: '2025',
     title: 'The Future of Sustainable Food Storage',
     excerpt: 'Exploring how smart locker technology is revolutionizing food storage and contributing to a more sustainable future.',
     content: `

@@ -426,6 +426,164 @@ const Contact = () => {
                                     </div>
                                 </details>
                             </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How long can I store my lunchbox?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">
+                                            You can store your lunchbox for one day only. Every evening, you will receive an email notification reminding you to retrieve it.
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            What happens if I forget my lunchbox?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">
+                                            If you forget to collect your lunchbox, it will be placed on shelves next to the CoolEat lockers for you to pick up the next day. CoolEat fridges are cleaned every evening to prevent cross-contamination.
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            When can I use CoolEat?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">
+                                            CoolEat smart locker fridges are accessible 24/7.
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            {/* Privacy Policy Section */}
+                            <div className="mt-12 mb-6">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Privacy Policy FAQs</h3>
+                            </div>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How long is my data stored?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">
+                                            Your data is stored for as long as necessary to provide our services or comply with legal obligations. If you stop using CoolEat, your data will be retained for 1 month before being permanently deleted, unless you request its removal earlier.
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            Where is my data stored?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600">Your data is securely stored:</p>
+                                        <ul className="mt-4 space-y-2 text-gray-600 ml-6 list-disc">
+                                            <li>In the UK for operational purposes.</li>
+                                            <li>On Amazon Web Services (AWS) servers, which comply with high security standards and data protection regulations.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
+
+                            <ScrollReveal>
+                                <details className="group bg-white rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden">
+                                    <summary className="flex items-center justify-between cursor-pointer group">
+                                        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
+                                            How can I delete my account?
+                                        </h3>
+                                        <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            <svg className="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-6">
+                                        <p className="text-gray-600 mb-4">To delete your account:</p>
+                                        <ol className="list-decimal list-inside space-y-3 text-gray-600 ml-4">
+                                            <li>Log in to the web application.</li>
+                                            <li>Go to Account Settings.</li>
+                                            <li>Select Delete My Account and confirm the action.</li>
+                                        </ol>
+                                        <p className="mt-4 text-gray-600">
+                                            You will receive an email confirmation once your account and associated data have been permanently deleted.
+                                        </p>
+                                        <p className="mt-4 text-gray-600">
+                                            Alternatively, email us at{' '}
+                                            <a href="mailto:contact@cooleat.eu" className="text-green-600 hover:text-green-700 transition-colors">
+                                                contact@cooleat.eu
+                                            </a>
+                                            {' '}to request account deletion.
+                                        </p>
+                                    </div>
+                                </details>
+                            </ScrollReveal>
                         </div>
                     </div>
                 </Container>

@@ -16,7 +16,7 @@ export const homeArticles: HomeArticle[] = [
         image: '/proto_.png',
         link: '/products',
         category: 'Innovation',
-        date: 'March 2024'
+        date: '2025'
     },
     {
         id: '2',
@@ -25,7 +25,7 @@ export const homeArticles: HomeArticle[] = [
         image: '/uni.webp',
         link: '/news/cooleat-launches-university-solution',
         category: 'Case Study',
-        date: 'March 2024'
+        date: '2025'
     },
     {
         id: '3',
@@ -34,6 +34,6 @@ export const homeArticles: HomeArticle[] = [
         image: '/mission.webp',
         link: '/about',
         category: 'Company',
-        date: 'March 2024'
+        date: '2025'
     }
 ]; 
